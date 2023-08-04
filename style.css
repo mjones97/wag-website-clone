@@ -72,7 +72,7 @@ header li {
 }
 
 .hero {
-    background-image: url(./assets/wag-background.jpeg);
+    background-image: url(./wag-background.jpeg);
     background-size: cover;
     background-position: center;
     height: 85vh;
