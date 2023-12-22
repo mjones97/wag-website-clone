@@ -32,9 +32,6 @@ span {
 }
 
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     font-size: 18px;
     padding: 14px;
     background-color: #ffffff;
@@ -59,7 +56,17 @@ header li {
     width: 60px;
 }
 
-.left-menu {
+.fa-bars {
+    display: none;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -85,7 +92,7 @@ header li {
 
 .left-col {
     display: grid;
-    grid-template-rows: 160px 60px 80px;
+    grid-template-rows: 100px 60px 80px;
     gap: 24px;
     box-sizing: border-box;
     place-items: center;
@@ -101,12 +108,12 @@ header li {
     padding: 30px;
     margin-top: 20px;
     margin-left: 40px;
+    width: 600px;
 }
 
 .hero-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
+    margin: 0px 150px;
+    padding-top: 50px;
     display: flex;
     justify-content: space-between;
 }
@@ -158,7 +165,7 @@ form input[type="text"] {
 }
 
 .right img {
-    width: 80%;
+    width: 100px;
 }
 
 .right p {
@@ -193,7 +200,7 @@ form input[type="text"] {
 }
 
 .why-wag {
-    padding: 150px 24px 40px
+    padding: 100px 24px 150px;
 }
 
 .why-wag-container {
@@ -241,6 +248,10 @@ form input[type="text"] {
     justify-content: center;
     align-items: center;
     padding: 50px 0px 200px 0px;
+}
+
+.love-dogs-column {
+    max-width: 500px;
 }
 
 .love-dogs img {
@@ -543,4 +554,211 @@ footer a {
 .footer-break {
     width: 100%; 
     color: rgba(105, 105, 105, 0.584);
+}
+
+@media screen and (max-width: 430px) {
+
+    h1 {
+        font-size: 40px;
+    }
+
+    h2 {
+        font-size: 30px;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+
+    header {
+        display: block;
+    }
+
+    .fa-bars {
+        display: block;
+    }
+
+    .menu {
+        padding: 10px;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .nav-toggle {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        gap: 10px;
+    }
+
+    .nav-toggle i {
+        font-size: 24px;
+    }
+
+    .nav-links li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .right-menu {
+        flex-direction: column;
+        margin-top: 10px;
+        align-items: normal;
+    }
+
+    .hero-container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin: 0;
+    }
+
+    .left-col {
+        margin: 0;
+        padding: 20px;
+        gap: 20px;
+        grid-template-rows: 100px 50px 80px;
+    }
+
+    .right-col {
+        margin-left: 0;
+        width: 350px;
+    }
+
+    .form-instructions {
+        font-size: 14px;
+    }
+
+    .right {
+        display: none;
+    }
+
+    .hero-img {
+        width: 100%;
+        height: 80%;
+    }
+
+    .why-wag {
+        margin-top: 500px;
+        padding: 0px 20px;
+    }
+
+    .why-wag-container {
+        padding: 0;
+        margin-bottom: 150px;
+    }
+
+    .features {
+        flex-direction: column;
+        gap: 30px;
+        margin-top: 30px;
+    }
+
+    .features-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 6px;
+    }
+
+    .features-box p {
+        font-size: 16px;
+        margin-top: 6px;
+    }
+
+    .love-dogs-container {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .love-dogs-column {
+        max-width: 100%;
+        padding: 20px;
+    }
+
+    .love-dogs img {
+        width: 100%;
+        padding: 30px;
+    }
+
+    .testimonials {
+        height: 100%;
+    }
+
+    .testimonials-container {
+        max-width: 100%;
+        padding: 30px 0px;
+        overflow: visible;
+    }
+
+    .wrapper {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .card {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .card-body {
+        width: 100%;
+        margin-left: 0px;
+        padding-bottom: 20px;
+    }
+
+    .review {
+        font-size: 18px;
+    }
+
+    .achievements-container {
+        grid-template-columns: repeat(1, 1fr);
+        padding: 0;
+    }
+
+    .footer-container {
+        flex-wrap: wrap;
+        padding: 30px;
+    }
+
+    .line-break {
+        padding: 20px 0px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 20px;
+        margin: 0;
+        padding: 0;
+    }
+
+    .footer-bottom-left {
+        width: 100%;
+    }
+
+    .footer-links {
+        font-size: 12px;
+        text-align: center;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .footer-social {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .footer-social li a i {
+        font-size: 20px;
+    }
 }
