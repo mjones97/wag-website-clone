@@ -56,14 +56,14 @@ header li {
     width: 60px;
 }
 
-.fa-bars {
-    display: none;
-}
-
 .menu {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.mobile-menu {
+    display: none;
 }
 
 .nav-links {
@@ -556,7 +556,7 @@ footer a {
     color: rgba(105, 105, 105, 0.584);
 }
 
-@media screen and (max-width: 430px) {
+@media screen and (max-width: 768px) {
 
     h1 {
         font-size: 40px;
