@@ -12,24 +12,29 @@
 </head>
 <body>
     <header>
-        <div class="left-menu">
+        <div class="menu">
             <div class="header-logo">
                 <img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Wag_logo.svg/2560px-Wag_logo.svg.png" alt="">
             </div>
-            <li>Services</li>
-            <li>Health & Wellness</li>
-            <li>Resources</li>
-            <li>Help Center & Safety</li>
-            <li style="background-color: rgb(250, 231, 168); padding: 2px 13px; border-radius: 30px;">Deals 🔥</li>
-        </div>
-        <div class="right-menu">
-            <li><i class="fa-solid fa-paw" style="padding-right: 5px;"></i> Become a Caregiver</li>
-            <li><i class="fa-regular fa-user" style="padding-right: 5px;"></i> My Account</li>
+            <div class="nav-toggle" onclick="toggleNav()">
+                <i class="fa-solid fa-bars"></i>
+                <ul class="nav-links">
+                    <li>Services</li>
+                    <li>Health & Wellness</li>
+                    <li>Resources</li>
+                    <li>Help Center & Safety</li>
+                    <li style="background-color: rgb(250, 231, 168); padding: 2px 13px; border-radius: 30px;">Deals 🔥</li>
+                    <div class="right-menu">
+                        <li><i class="fa-solid fa-paw" style="padding-right: 5px;"></i> Become a Caregiver</li>
+                        <li><i class="fa-regular fa-user" style="padding-right: 5px;"></i> My Account</li>
+                    </div>
+                </ul>
+            </div>
         </div>
     </header>
 
     <section class="hero">
-        <div class="hero-container" style="padding-top: 30px;">
+        <div class="hero-container">
             <div class="left-col">
                 <h1>Become a Dog Walker with Wag!</h1>
                 <h3>Join our community of over 400K Pet Caregivers nationwide</h3>
@@ -92,7 +97,7 @@
 
     <section class="love-dogs">
         <div class="love-dogs-container">
-            <div class="column" style="max-width: 500px;">
+            <div class="love-dogs-column">
                 <h2>Love dogs? Get paid for it!</h2>
                 <p style="margin: 20px auto;">Caring for dogs is what you do best. Connecting dog walkers, sitters, and trainers with a nationwide community of pet parents who have dog walking, overnight sitting & boarding, or training needs is what we do best. Build your business and become your own boss with Wag!.</p>
                 <p><a href="" style="text-decoration: none; color: rgb(0, 191, 143);">Meet some Pet Caregivers who walk for Wag!</a></p>
@@ -258,5 +263,11 @@
     </footer>    
 
     <script src="./index.js"></script>
+    <script>
+        function toggleNav() {
+            var navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('show');
+        }
+    </script>
 </body>
 </html>
