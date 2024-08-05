@@ -3,181 +3,630 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wag! | #1 App For Local Dog Walkers</title>
+    <title>wagwalking.com</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Mulish&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
     <link rel="stylesheet" href="./style.css">
-    <script src="https://kit.fontawesome.com/5916c53508.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header>
-        <div class="menu">
-            <div class="header-logo">
-                <img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Wag_logo.svg/2560px-Wag_logo.svg.png" alt="">
-            </div>
-            <div class="nav-toggle" onclick="toggleNav()">
-                <i class="fa-solid fa-bars mobile-menu"></i>
-                <ul class="nav-links">
-                    <li>Services</li>
-                    <li>Health & Wellness</li>
-                    <li>Resources</li>
-                    <li>Help Center & Safety</li>
-                    <li style="background-color: rgb(250, 231, 168); padding: 2px 13px; border-radius: 30px;">Deals 🔥</li>
-                    <div class="right-menu">
-                        <li><i class="fa-solid fa-paw" style="padding-right: 5px;"></i> Become a Caregiver</li>
-                        <li><i class="fa-regular fa-user" style="padding-right: 5px;"></i> My Account</li>
-                    </div>
-                </ul>
-            </div>
+    <header class="sticky-top">
+        <div class="top-nav d-flex justify-content-center align-items-center text-center pt-3">
+            <p class="d-flex gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+                    <path d="M11.995 24a.413.413 0 01-.181-.038C.944 19.486.983 8.778 1.002 4.744v-.422c0-.27.21-.48.478-.48h1.367c3.317 0 5.974-1.7 8.871-3.756a.503.503 0 01.564 0c2.887 2.056 5.554 3.756 8.871 3.756h1.367c.268 0 .478.21.478.48v.432c.02 4.034.058 14.732-10.802 19.217a.778.778 0 01-.2.029zm3.793-6.734c.624-.076 1.168-.375 1.511-1.2.662-1.586-.502-2.556-1.526-3.408-.247-.206-.5-.417-.73-.635-.148-.142-.298-.332-.458-.534-.55-.697-1.306-1.654-2.754-1.476l-.057.007c-1.449.178-1.95 1.294-2.315 2.108-.106.24-.209.466-.318.639-.17.272-.373.544-.568.81-.78 1.058-1.667 2.255-.648 3.625.933 1.254 2.082.808 3.19.372.498-.196 1.015-.395 1.53-.459l.057-.007c.52-.063 1.07.01 1.606.084.502.064 1.013.132 1.48.074zm-8.1-5.032a1.18 1.18 0 00.66-.299c.566-.51.562-1.481-.016-2.175-.312-.372-.737-.606-1.172-.64a1.248 1.248 0 00-.925.303c-.566.51-.563 1.482.015 2.175.312.373.737.606 1.172.64.093.008.18.007.266-.004zm8.634-1.06c.085-.01.17-.03.254-.056.413-.137.774-.467.982-.904.394-.812.162-1.756-.511-2.114a1.248 1.248 0 00-.971-.07c-.414.139-.77.468-.982.905-.394.813-.162 1.756.51 2.114.223.113.465.156.718.125zm-6.314-1.789c.105-.012.208-.04.304-.08.733-.298 1.049-1.27.711-2.168-.186-.494-.539-.882-.968-1.066a1.273 1.273 0 00-.99-.028c-.732.298-1.048 1.27-.71 2.167.186.495.538.882.962 1.067.23.097.467.136.69.108zm3.373-.414c.224-.027.445-.117.64-.267.371-.283.614-.748.676-1.268.11-.952-.431-1.82-1.214-1.931a1.23 1.23 0 00-.954.267c-.372.283-.62.748-.681 1.269-.11.952.431 1.819 1.214 1.93.108.012.214.013.32 0z" fill="#FFF" fill-rule="nonzero"/>
+                </svg>
+                <a href="#">Compare top-rated pet insurance plans – Save up to $273 each year – Get a custom quote</a></p>
         </div>
+        <nav class="navbar navbar-expand-lg bg-white">
+            <div class="container-fluid px-4">
+                <a class="navbar-brand" href="#"><img class="logo img-fluid" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Wag_logo.svg/2560px-Wag_logo.svg.png" alt=""></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav gap-3 me-auto mb-2 mb-lg-0">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Services
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Health & Wellness
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Resources</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Help Center & Safety</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Deals</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Become a Caregiver
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#">Become a Walker</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="#">Become a Sitter</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
     </header>
 
     <section class="hero">
-        <div class="hero-container">
-            <div class="left-col">
-                <h1>Become a Dog Walker with Wag!</h1>
-                <h3>Join our community of over 400K Pet Caregivers nationwide</h3>
-                <img class="hero-img" src="https://wagwalking.com/_next/static/images/become-a-walker-banner-walkers-52cf9fb02d377043488ffe896f43e6c8.png" alt="">
-            </div>
-            <div class="right-col">
-                <p class="form-instructions">Please enter your name as it appears on your ID.</p>
-                <div class="two-column">
-                    <div class="left">
-                        <form action="">
-                            <input type="text" placeholder="Legal first name">
-                            <input type="text" placeholder="Legal middle name">
-                            <input type="text" placeholder="Legal last name">
-                            <input type="text" placeholder="Email address">
-                            <input type="text" placeholder="Phone number">
-                        </form>
+        <div class="hero-container text-white">
+            <h1>Local, trusted pet care</h1>
+            <h4>Book 5-star Pet Caregivers near you</h4>
+            <div class="categories">
+                <div class="filter-block">                    
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide" data-target="#walk-content">
+                                <img class="img-fluid" src="https://cdn.trustpilot.net/consumersite-businessunitimages/57d7f8860000ff000594a726/profile-description/wag-walk-2x.png" alt="">
+                                <p>Walk</p>
+                            </div>
+                            <div class="swiper-slide" data-target="#fashion-content">
+                                <img class="img-fluid" src="https://cdn.trustpilot.net/consumersite-businessunitimages/57d7f8860000ff000594a726/profile-description/sitting-2x.png" alt="">
+                                <p>Overnight</p>
+                            </div>
+                            <div class="swiper-slide" data-target="#home-content">
+                                <img class="img-fluid" src="https://cdn.trustpilot.net/consumersite-businessunitimages/57d7f8860000ff000594a726/profile-description/drop-in-2x.png" alt="">
+                                <p>Drop-in</p>
+                            </div>
+                            <div class="swiper-slide" data-target="#beauty-content">
+                                <img class="img-fluid" src="https://cdn.trustpilot.net/consumersite-businessunitimages/57d7f8860000ff000594a726/profile-description/health-2x.png" alt="">
+                                <p>Wag! Wellness</p>
+                            </div>
+                            <div class="swiper-slide" data-target="#sports-content">
+                                <img class="img-fluid" src="https://cdn.trustpilot.net/consumersite-businessunitimages/57d7f8860000ff000594a726/profile-description/training-2x.png" alt="">
+                                <p>Training</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="right">
-                        <img src="https://wagwalking.com/_next/static/images/become-a-walker-qr-code-09aa0305d4bc23bf12ffb4d42b9fadd3.jpeg" alt="">
-                        <p>Approved Caregiver?<br>
-                            Download the app.</p>
+                </div>
+                <div id="walk-content" class="category-content">
+                    <div class="row">
+                        <div class="col-lg-8 category-content-text">
+                            <p>Choose between a 20-minute, 30-minute, or 60-minute stroll for your dog. On-demand or pre-scheduled. Learn more about dog walking.</p>
+                        </div>
+                        <div class="col-lg-4 category-content-btn-wrapper">
+                            <button class="category-content-btn">Book a walk</button>
+                        </div>
                     </div>
-                </div>
-                <p class="form-terms">By submitting my phone number, I agree to receive automated and non-automated transactional and marketing calls/texts from Wag!. Consent not required; text STOP to 24006 to opt out. Opt out instructions subject to change. Message and data rates may apply. <span>Mobile Terms</span> apply.</p>
-                <div class="checkboxes">
-                    <input type="checkbox" id="checkbox1">
-                    <label for="checkbox1">I agree to Wag!'s <span>Terms</span> (including a <span>mutual arbitration clause</span>) and <span>Privacy Policy</span>.</label>
-                </div>
-                <div class="checkboxes">
-                    <input type="checkbox" id="checkbox2">
-                    <label for="checkbox2">I confirm that I am a US resident and am over 18.</label>
-                </div>
-                <button>Get Started</button>
-            </div>
-    </section>
-
-    <section class="why-wag">
-        <h1>Why Wag!?</h1>
-        <div class="why-wag-container">
-            <div class="features">
-                <div class="features-box">
-                    <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2aWV3Qm94PSIwIDAgMTMwIDEzMCI+PGRlZnM+PGNpcmNsZSBpZD0iYSIgY3g9IjY1IiBjeT0iNjUiIHI9IjY1Ii8+PC9kZWZzPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PG1hc2sgaWQ9ImIiIGZpbGw9IiNmZmYiPjx1c2UgeGxpbms6aHJlZj0iI2EiLz48L21hc2s+PHVzZSB4bGluazpocmVmPSIjYSIgZmlsbD0iI0Y1RjVGNSIvPjxnIG1hc2s9InVybCgjYikiPjxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDIzLjQgMjAuOCkiPjxyZWN0IHdpZHRoPSI2OC4wNzMiIGhlaWdodD0iNjQuNDI2IiB4PSIxLjgyMyIgeT0iMTAuOTQiIGZpbGw9IiNBQUEiIHJ4PSI0LjAzIi8+PHJlY3Qgd2lkdGg9IjY4LjA3MyIgaGVpZ2h0PSI2NC40MjYiIHk9IjguNTA5IiBmaWxsPSIjRkZGIiByeD0iNC4wMyIvPjxwYXRoIGZpbGw9IiNEOEQ4RDgiIGQ9Ik02LjA3OCA1Ny4xMzJoNi4wNzh2Ni4wNzhINi4wNzh6bTguNTA5IDBoNi4wNzh2Ni4wNzhoLTYuMDc4em04LjUwOSAwaDYuMDc4djYuMDc4aC02LjA3OHptOC41MDkgMGg2LjA3OHY2LjA3OGgtNi4wNzh6Ii8+PHBhdGggZmlsbD0iI0Y1RjVGNSIgZD0iTTQwLjExNCA1Ny4xMzJoNi4wNzh2Ni4wNzhoLTYuMDc4eiIvPjxwYXRoIGZpbGw9IiNEOEQ4RDgiIGQ9Ik02LjA3OCAzMS42MDVoNi4wNzh2Ni4wNzhINi4wNzh6bTguNTA5IDBoNi4wNzh2Ni4wNzhoLTYuMDc4em04LjUwOSAwaDYuMDc4djYuMDc4aC02LjA3OHptOC41MDkgMGg2LjA3OHY2LjA3OGgtNi4wNzh6bTguNTA5IDBoNi4wNzh2Ni4wNzhoLTYuMDc4em04LjUwOSAwSDU0Ljd2Ni4wNzhoLTYuMDc4em04LjUxIDBoNi4wNzh2Ni4wNzhoLTYuMDc4eiIvPjxwYXRoIGZpbGw9IiNGNUY1RjUiIGQ9Ik02LjA3OCAyMy4wOTZoNi4wNzh2Ni4wNzhINi4wNzh6bTguNTA5IDBoNi4wNzh2Ni4wNzhoLTYuMDc4em04LjUwOSAwaDYuMDc4djYuMDc4aC02LjA3OHoiLz48cGF0aCBmaWxsPSIjRDhEOEQ4IiBkPSJNMzEuNjA1IDIzLjA5Nmg2LjA3OHY2LjA3OGgtNi4wNzh6bTguNTA5IDBoNi4wNzh2Ni4wNzhoLTYuMDc4em04LjUwOSAwSDU0Ljd2Ni4wNzhoLTYuMDc4em04LjUxIDBoNi4wNzh2Ni4wNzhoLTYuMDc4ek02LjA3OCA0MC4xMTRoNi4wNzh2Ni4wNzhINi4wNzh6bTguNTA5IDBoNi4wNzh2Ni4wNzhoLTYuMDc4em04LjUwOSAwaDYuMDc4djYuMDc4aC02LjA3OHoiLz48cGF0aCBmaWxsPSIjRkFBQjQzIiBkPSJNMzEuNjA1IDQwLjExNGg2LjA3OHY2LjA3OGgtNi4wNzh6Ii8+PHBhdGggZmlsbD0iI0Q4RDhEOCIgZD0iTTQwLjExNCA0MC4xMTRoNi4wNzh2Ni4wNzhoLTYuMDc4em04LjUwOSAwSDU0Ljd2Ni4wNzhoLTYuMDc4em04LjUxIDBoNi4wNzh2Ni4wNzhoLTYuMDc4ek02LjA3OCA0OC42MjNoNi4wNzh2Ni4wNzhINi4wNzh6Ii8+PHBhdGggZmlsbD0iI0ZBQUI0MyIgZD0iTTE0LjU4NyA0OC42MjNoNi4wNzh2Ni4wNzhoLTYuMDc4eiIvPjxwYXRoIGZpbGw9IiNEOEQ4RDgiIGQ9Ik0yMy4wOTYgNDguNjIzaDYuMDc4djYuMDc4aC02LjA3OHptOC41MDkgMGg2LjA3OHY2LjA3OGgtNi4wNzh6Ii8+PHBhdGggZmlsbD0iIzc3ODZCNyIgZD0iTTQuMDMgOC41MWg2MC4wMTNhNC4wMyA0LjAzIDAgMCAxIDQuMDMgNC4wM3Y0LjQ3OEgwVjEyLjU0YTQuMDMgNC4wMyAwIDAgMSA0LjAzLTQuMDN6Ii8+PHJlY3Qgd2lkdGg9IjQuODYyIiBoZWlnaHQ9IjEzLjM3MSIgeD0iMTMuMzcxIiBmaWxsPSIjQUFBIiBzdHJva2U9IiNFQkVDRUMiIHN0cm9rZS13aWR0aD0iMS4wMDgiIHJ4PSIyLjQzMSIvPjxyZWN0IHdpZHRoPSI0Ljg2MiIgaGVpZ2h0PSIxMy4zNzEiIHg9IjQ5LjgzOSIgZmlsbD0iI0FBQSIgc3Ryb2tlPSIjRUJFQ0VDIiBzdHJva2Utd2lkdGg9IjEuMDA4IiByeD0iMi40MzEiLz48L2c+PGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNjguMzc3IDczLjA3KSI+PGNpcmNsZSBjeD0iMTguODQyIiBjeT0iMTguODQyIiByPSIxOC44NDIiIGZpbGw9IiMwMEJGOEYiLz48cGF0aCBzdHJva2U9IiNGRkYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIzLjAyMiIgZD0iTTE4Ljg0MiA3LjI5NHYxMS41NDhtNS45MTEgNS42MTItNS45MTEtNS42MTMiLz48L2c+PC9nPjwvZz48L3N2Zz4=" alt="">
-                    <p>Flexibility</p>
-                    <p>Make money on your own time. Set your own schedule. Enjoy the flexibility of choosing how and when you want to work—grab a last minute ASAP walk or plan out walks weeks in advance!</p>
-                </div>
-                <div class="features-box">
-                    <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2aWV3Qm94PSIwIDAgMTMwIDEzMCI+PGRlZnM+PHBhdGggaWQ9ImEiIGQ9Ik0yNi45MTcgMi43NzNoMzUuNjJhNi4yNCA2LjI0IDAgMCAxIDUuOTczIDQuNDM4bDE1LjI5NCA1MC43MDRhNi4yNCA2LjI0IDAgMCAxLTUuOTc0IDguMDQySDExLjU1MmE2LjI0IDYuMjQgMCAwIDEtNS45NzItOC4wNUwyMC45NDUgNy4yMDRhNi4yNCA2LjI0IDAgMCAxIDUuOTcyLTQuNDN6Ii8+PHBhdGggaWQ9ImMiIGQ9Ik05LjY0My4wNEgwdjE4LjE2OGgxOS4yODZWLjA0eiIvPjwvZGVmcz48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxjaXJjbGUgY3g9IjY1IiBjeT0iNjUiIHI9IjY1IiBmaWxsPSIjRjVGNUY1Ii8+PGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMjEuMTI1IDMxLjQ2KSI+PHBhdGggZmlsbD0iI0ZGRiIgc3Ryb2tlPSIjREFEOUQ5IiBzdHJva2Utd2lkdGg9IjIuNDk2IiBkPSJNNjYuMjc3LjZjMS42NDUgMCAzLjE5NS41MzggNC40NTMgMS40NjlhNy40NzggNy40NzggMCAwIDEgMi43MDcgMy44MjhsMTcuMjE2IDU2LjI1YTcuNDY1IDcuNDY1IDAgMCAxLS41NDcgNS43MDUgNy40ODggNy40ODggMCAwIDEtNi42MTMgMy45NzVIOC42NjFhNy40NjUgNy40NjUgMCAwIDEtNS4yOTUtMi4xOTMgNy40ODggNy40ODggMCAwIDEtMS44NjItNy40OTZMMTguOCA1Ljg4OGE3LjQ3OCA3LjQ3OCAwIDAgMSAyLjcwOC0zLjgyMiA3LjQ3OCA3LjQ3OCAwIDAgMSA0LjQ1LTEuNDY1eiIvPjxwYXRoIGZpbGw9IiNGRkYiIHN0cm9rZT0iI0ZGRiIgc3Ryb2tlLXdpZHRoPSIyLjQ5NiIgZD0iTTY0LjQyOC0xLjI0OGMxLjY0NSAwIDMuMTk1LjUzNyA0LjQ1MyAxLjQ2OGE3LjQ3OCA3LjQ3OCAwIDAgMSAyLjcwNyAzLjgyOGwxNy4yMTcgNTYuMjVhNy40NjUgNy40NjUgMCAwIDEtLjU0OCA1LjcwNiA3LjQ4OCA3LjQ4OCAwIDAgMS02LjYxMyAzLjk3NUg2LjgxMmE3LjQ2NSA3LjQ2NSAwIDAgMS01LjI5NS0yLjE5NEE3LjQ4OCA3LjQ4OCAwIDAgMS0uMzQ1IDYwLjI5TDE2Ljk1IDQuMDRBNy40NzggNy40NzggMCAwIDEgMTkuNjYuMjE3YTcuNDc4IDcuNDc4IDAgMCAxIDQuNDQ5LTEuNDY1eiIvPjxtYXNrIGlkPSJiIiBmaWxsPSIjZmZmIj48dXNlIHhsaW5rOmhyZWY9IiNhIi8+PC9tYXNrPjx1c2UgeGxpbms6aHJlZj0iI2EiIGZpbGw9IiNFQkVDRUMiLz48cGF0aCBmaWxsPSIjMDBCRjhGIiBkPSJtMzkuODUgOS42MTMgNy43NTMgMTcuNzk3aDI3LjQ3TDcwLjQyNyA5LjYxM3pNOC44NDkgNDIuMzc3IDQuOTA2IDUzLjQxMWgyNi4xNzZsLTIuNDk0LTExLjAzNHoiIG1hc2s9InVybCgjYikiLz48cGF0aCBzdHJva2U9IiNGRkYiIHN0cm9rZS1saW5lY2FwPSJzcXVhcmUiIHN0cm9rZS13aWR0aD0iNi4yNCIgZD0ibTI5LjEyIDQyLjk4NyA1LjA4NCAyNC4wMzUiIG1hc2s9InVybCgjYikiLz48cGF0aCBzdHJva2U9IiNGRkYiIHN0cm9rZS1saW5lY2FwPSJzcXVhcmUiIHN0cm9rZS13aWR0aD0iNC45OTIiIGQ9Ik00Mi4wNjIgOS43MDdoMjcuMTc1IiBtYXNrPSJ1cmwoI2IpIi8+PHBhdGggc3Ryb2tlPSIjRkZGIiBzdHJva2UtbGluZWNhcD0ic3F1YXJlIiBzdHJva2Utd2lkdGg9IjYuMjQiIGQ9Ik01MC4zODIgNDEuODc5SDEwLjk0M000OS45MiAyNy43MjFoMjQuOTkyIiBtYXNrPSJ1cmwoI2IpIi8+PHBhdGggc3Ryb2tlPSIjRkZGIiBzdHJva2UtbGluZWNhcD0ic3F1YXJlIiBzdHJva2Utd2lkdGg9IjcuNDg4IiBkPSJtMzQuNTQ5LS4zMDIgMzAuODM3IDY4LjczMSIgbWFzaz0idXJsKCNiKSIvPjxwYXRoIHN0cm9rZT0iI0ZGRiIgc3Ryb2tlLWxpbmVjYXA9InNxdWFyZSIgc3Ryb2tlLXdpZHRoPSI2LjI0IiBkPSJNNDAuMjEzIDE4LjAyN0gxOC4wMjdNMzAuNjYzIDU0LjA4SDYuMDI1IiBtYXNrPSJ1cmwoI2IpIi8+PHBhdGggc3Ryb2tlPSIjMUZBRUUzIiBzdHJva2Utd2lkdGg9IjIuNDk2IiBkPSJNNi40MDUgNTQuMTg2aDI1LjA0OWwtMi42MS0xMi4wMzZoMjQuNTA5bC05Ljk2NS0yMi4wNTQiIG1hc2s9InVybCgjYikiLz48L2c+PHBhdGggZmlsbD0iI0VGNjQ2QiIgZmlsbC1ydWxlPSJub256ZXJvIiBzdHJva2U9IiNFRjY0NkIiIHN0cm9rZS13aWR0aD0iMS4yNDgiIGQ9Ik02NS4wMzYgNS44NzZjNC45NC0uMDA2IDkuNjggMS45MSAxMy4xNzYgNS4zMjcgMy41MDEgMy40MiA1LjQ3IDguMDYzIDUuNDc1IDEyLjkwNiAwIDEwLjE1LTE1LjA2NyAyNS44OTUtMTcuNzk2IDI4LjY0M2wtLjM4LjM4YTEzLjM4OSAxMy4zODkgMCAwIDEtLjQ0NC0uMzI2Yy0zLjU3Mi0yLjc1My0xOC42ODItMTguNTI2LTE4LjY4Mi0yOC42OTguMDA2LTUuMDQyIDIuMDk4LTkuNjA0IDUuNDc3LTEyLjkwNSAzLjM3NC0zLjI5NSA4LjAzMi01LjMzMiAxMy4xNzQtNS4zMjd6Ii8+PGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNTIuMDAxIDExLjQ5MikiPjxjaXJjbGUgY3g9IjEyLjQ4IiBjeT0iMTIuNDgiIHI9IjEyLjQ4IiBmaWxsPSIjRUNFQ0VDIiBzdHJva2U9IiNDQ0MiIHN0cm9rZS13aWR0aD0iMS4yNDgiLz48ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgyLjgzNiA0LjI4KSI+PG1hc2sgaWQ9ImQiIGZpbGw9IiNmZmYiPjx1c2UgeGxpbms6aHJlZj0iI2MiLz48L21hc2s+PHBhdGggZmlsbD0iI0JBQkFCQSIgZD0iTTE3Ljk2NCAyLjQ5OUE1LjU2NyA1LjU2NyAwIDAgMCAxMy43MjIuNTQ2aC0xLjM2QTcuNDkgNy40OSAwIDAgMCA5LjY0My4wNGE3LjQ4OCA3LjQ4OCAwIDAgMC0yLjcyLjUwN0g1LjU2NWE1LjU2NyA1LjU2NyAwIDAgMC00LjI0MiAxLjk1MkE1LjUwMSA1LjUwMSAwIDAgMCAuMDc0IDYuOThsLjc5NyA0LjgwNGEyLjcyMiAyLjcyMiAwIDAgMCAyLjcgMi4yNzhoLjE1NGE3LjQ5NSA3LjQ5NSAwIDAgMCAzLjc0MSAyLjU2IDIuMjcgMi4yNyAwIDAgMCAyLjE3NyAxLjU4NyAyLjI3IDIuMjcgMCAwIDAgMi4xNzYtMS41ODcgNy40OTUgNy40OTUgMCAwIDAgMy43NDItMi41NmguMTU0YTIuNzIyIDIuNzIyIDAgMCAwIDIuNy0yLjI3OGwuNzk2LTQuODA1YTUuNTAyIDUuNTAyIDAgMCAwLTEuMjQ3LTQuNDgiIG1hc2s9InVybCgjZCkiLz48L2c+PHBhdGggZmlsbD0iI0NDQyIgZD0iTTE4LjU1MiAxNy42OTNIMTEuOTdWNS40NzRoNC41ODhjMy4wMzEgMCA1LjMzOSAyLjcwNCA0Ljg0NiA1LjY3OWwtLjc5NyA0LjgwNGEyLjA4MSAyLjA4MSAwIDAgMS0yLjA1NiAxLjczNiIvPjxwYXRoIGZpbGw9IiNDQ0MiIGQ9Ik02LjQwNyAxNy42OTNoNi41OFY1LjQ3NEg4LjRjLTMuMDMyIDAtNS4zNCAyLjcwNC00Ljg0NiA1LjY3OWwuNzk2IDQuODA0YTIuMDggMi4wOCAwIDAgMCAyLjA1NiAxLjczNiIvPjxwYXRoIGZpbGw9IiNDQ0MiIGQ9Ik0xMi40OCAyMC41NzNjLTMuNzggMC02Ljg0Mi0zLjA0Ni02Ljg0Mi02LjgwNHYtMS45OThjMC0zLjc1OCAzLjA2My02LjgwNCA2Ljg0MS02LjgwNCAzLjc3OSAwIDYuODQyIDMuMDQ2IDYuODQyIDYuODA0djEuOTk4YzAgMy43NTctMy4wNjMgNi44MDQtNi44NDIgNi44MDQiLz48cGF0aCBmaWxsPSIjQTlBOUE5IiBkPSJNMTAuMjIgMTEuNTc4YTEuMDQgMS4wNCAwIDAgMS0xLjA0MyAxLjAzNyAxLjA0IDEuMDQgMCAwIDEtMS4wNDMtMS4wMzcgMS4wNCAxLjA0IDAgMCAxIDEuMDQzLTEuMDM2IDEuMDQgMS4wNCAwIDAgMSAxLjA0MiAxLjAzNiIvPjxwYXRoIGZpbGw9IiNGRkYiIGQ9Ik05LjEyIDExLjEzYS4yOC4yOCAwIDAgMS0uMjgxLjI4LjI4LjI4IDAgMCAxLS4yLS40NzkuMjguMjggMCAwIDEgLjM5OCAwIC4yOC4yOCAwIDAgMSAuMDgzLjE5OSIvPjxwYXRoIGZpbGw9IiNBOUE5QTkiIGQ9Ik0xNi44MjQgMTEuNTc4YTEuMDQgMS4wNCAwIDAgMS0xLjA0MiAxLjAzNyAxLjA0IDEuMDQgMCAwIDEtMS4wNDMtMS4wMzcgMS4wNCAxLjA0IDAgMCAxIDEuMDQzLTEuMDM2IDEuMDQgMS4wNCAwIDAgMSAxLjA0MiAxLjAzNiIvPjxwYXRoIGZpbGw9IiNGRkYiIGZpbGwtcnVsZT0ibm9uemVybyIgZD0iTTE1LjcyNSAxMS4xM2EuMjguMjggMCAwIDEtLjI4Mi4yOC4yODEuMjgxIDAgMCAxLS4yODEtLjI4LjI4LjI4IDAgMCAxIC40OC0uMTk5LjI4LjI4IDAgMCAxIC4wODMuMTk5em0tNC44NzUgOS4wOWMwIC44OTUuNzMgMS42MiAxLjYzIDEuNjIuODk5IDAgMS42MjgtLjcyNSAxLjYyOC0xLjYydi0yLjc2NkgxMC44NXYyLjc2NnoiLz48cGF0aCBmaWxsPSIjRTdFN0U3IiBkPSJNMTIuMTkgMjAuNDkyYS4yODkuMjg5IDAgMCAwIC41NzggMHYtMy4xNjloLS41Nzh2My4xNjl6Ii8+PHBhdGggZmlsbD0iI0U0RTRFNCIgZD0iTTE2LjA2MyAxNy4wMjZhMi4zNiAyLjM2IDAgMCAwLTEuMDk0LTEuOTkxIDIuMzYyIDIuMzYyIDAgMCAxLTEuMDk0LTEuOTlWNS4xMDhhNi45MTEgNi45MTEgMCAwIDAtMi43OTIgMHY3LjkzNWEyLjM2IDIuMzYgMCAwIDEtMS4wOTQgMS45OTEgMi4zNjIgMi4zNjIgMCAwIDAtMS4wOTQgMS45OXYuMDg4YzAgMSAuODE0IDEuODA5IDEuODIgMS44MDkuODUyIDAgMS41NjgtLjU4NCAxLjc2NC0xLjM3MmExLjgxNyAxLjgxNyAwIDAgMCAxLjc2NSAxLjM3MmMxLjAwNSAwIDEuODE5LS44MSAxLjgxOS0xLjgwOXYtLjA4OHoiLz48cGF0aCBmaWxsPSIjQkFCQUJBIiBkPSJNMTQuMjcxIDE1LjU4N2EuNzUuNzUgMCAwIDAtLjczLS42OTRoLTIuMTI0Yy0uMzkgMC0uNzEuMzMyLS43My43MTYuMDA5Ljc1My44MDggMS4zNzMgMS43OTMgMS4zNzMuOTkgMCAxLjc5MS0uNjM2IDEuNzkxLTEuMzk1Ii8+PHBhdGggZmlsbD0iI0U1RTVFNSIgZmlsbC1ydWxlPSJub256ZXJvIiBkPSJtMTYuMjIyIDkuODI5LS43NC4wNzhhLjY2OC42NjggMCAxIDEtLjE0MS0xLjMyN2wuNzQtLjA3OGEuNjY4LjY2OCAwIDEgMSAuMTQxIDEuMzI3bS03LjQ4NSAwIC43MzkuMDc4YS42NjguNjY4IDAgMSAwIC4xNDEtMS4zMjdsLS43NC0uMDc4YS42NjguNjY4IDAgMSAwLS4xNDEgMS4zMjciLz48cGF0aCBmaWxsPSIjQkFCQUJBIiBmaWxsLXJ1bGU9Im5vbnplcm8iIGQ9Ik02LjY0OCAxOC4yMzhhLjQxLjQxIDAgMCAxLS4wMzItLjAwMmMtLjE3NS0uMDE3LS4yMy0uMTE2LS4zNS0uMzMzLS4wMy0uMDUzLS4xLS4xOC0uMTE4LS4yMjMtLjYxNC0xLjM1My0uNjMtMi44Mi0uNTYzLTQuMDc3bC4yODktNC44OWEuMzI1LjMyNSAwIDAgMSAuNTY5LS4xOTcuMzI1LjMyNSAwIDAgMSAuMDgyLjIzNWwtLjI5IDQuODg4Yy0uMDYyIDEuMTc3LS4wNSAyLjU0OC41MDYgMy43NzUuMDE1LjAzLjExLjIwMi4xNTUuMjgzYS4zMzEuMzMxIDAgMCAxIC4wNDQuMDcuMzI3LjMyNyAwIDAgMS0uMjkyLjQ3em0xMS42NjctLjMzNy4yOTcuMTM0LS4yOTctLjEzNHptLS4wMDUuMzM3YS4zMjYuMzI2IDAgMCAxLS4yOTEtLjQ3MS4zMTguMzE4IDAgMCAxIC4wNDMtLjA3Yy4wNDYtLjA4MS4xNC0uMjU0LjE1Ni0uMjg2LjU1NS0xLjIyNC41NjctMi41OTUuNTA1LTMuNzc0bC0uMjktNC44ODZhLjMyNC4zMjQgMCAwIDEgLjMwNy0uMzQzLjMyNi4zMjYgMCAwIDEgLjM0NC4zMDVsLjI5IDQuODg4Yy4wNjYgMS4yNTkuMDUgMi43MjYtLjU2MyA0LjA3OS0uMDM4LjA3NS0uMDc3LjE1LS4xMTkuMjIzLS4xMi4yMTctLjE3NS4zMTYtLjM1LjMzM2EuMzUyLjM1MiAwIDAgMS0uMDMyLjAwMnoiLz48L2c+PC9nPjwvc3ZnPg==" alt="">
-                    <p>Technology</p>
-                    <p>Wag! is a fast, friendly, and convenient platform that offers instant pay, real-time GPS tracking, automated report cards, and live chat with clients.</p>
-                </div>
-                <div class="features-box">
-                    <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMzAgMTMwIj48ZyBmaWxsPSJub25lIj48Y2lyY2xlIGN4PSI2NC45NDEiIGN5PSI2NC45NDEiIHI9IjY0Ljk0MSIgZmlsbD0iI0Y1RjVGNSIvPjxwYXRoIGZpbGw9IiM4NTYwM0EiIGQ9Ik0zMy42MjkgOTcuODVhMS40ODUgMS40ODUgMCAwIDEtMS40NzgtMS40ODZsLjE4MS02NC45NzlhMy4xMTQgMy4xMTQgMCAwIDEgMy4xMTctMy4wNzlsNDYuNzI0LjEzYTMuMTE3IDMuMTE3IDAgMCAxIDMuMDk2IDMuMDk2bC0uMTgyIDY0Ljk3OWExLjQ4NSAxLjQ4NSAwIDAgMS0xLjQ4NSAxLjQ3NSIvPjxwYXRoIGZpbGw9IiNGRkYiIGQ9Ik0zNi4wNjEgMzIuMjUyaDQ1LjEwNXY2Mi4wOTlIMzYuMDYxeiIvPjxyZWN0IHdpZHRoPSIzNS42NjMiIGhlaWdodD0iMi4wOSIgeD0iNDAuMjc5IiB5PSIzOC44MTEiIGZpbGw9IiNENkQ2RDYiIHJ4PSIxLjA0NSIvPjxyZWN0IHdpZHRoPSIyOS4yMjYiIGhlaWdodD0iMi4wOSIgeD0iNDAuMjc5IiB5PSI0My41MTUiIGZpbGw9IiNENkQ2RDYiIHJ4PSIxLjA0NSIvPjxyZWN0IHdpZHRoPSIyNy4wOCIgaGVpZ2h0PSIyLjA5IiB4PSI0MC4yNzkiIHk9IjQ4LjIyMiIgZmlsbD0iI0Q2RDZENiIgcng9IjEuMDQ1Ii8+PHJlY3Qgd2lkdGg9IjM1LjY2MyIgaGVpZ2h0PSIyLjA5IiB4PSI0MC4yNzkiIHk9IjU1LjkyOCIgZmlsbD0iI0Q2RDZENiIgcng9IjEuMDQ1Ii8+PHJlY3Qgd2lkdGg9IjM1LjY2MyIgaGVpZ2h0PSIyLjA5IiB4PSI0MC4yNzkiIHk9IjYwLjYzNSIgZmlsbD0iI0Q2RDZENiIgcng9IjEuMDQ1Ii8+PHJlY3Qgd2lkdGg9IjMyLjQ1MSIgaGVpZ2h0PSIyLjA5IiB4PSI0MC4yNzkiIHk9IjY1LjMzOSIgZmlsbD0iI0Q2RDZENiIgcng9IjEuMDQ1Ii8+PHJlY3Qgd2lkdGg9IjM0LjM3NyIgaGVpZ2h0PSIyLjA5IiB4PSI0MC4yNzkiIHk9IjcwLjA0NiIgZmlsbD0iI0Q2RDZENiIgcng9IjEuMDQ1Ii8+PHJlY3Qgd2lkdGg9IjE0LjE3NCIgaGVpZ2h0PSIyLjA5IiB4PSI0MC4yNzkiIHk9Ijg2LjEzMiIgZmlsbD0iI0Q2RDZENiIgcng9IjEuMDQ1Ii8+PHBhdGggZmlsbD0iI0IyQjJCMiIgZD0iTTcyLjI2NSAzMC45NTljLTEuNTktMS4wMjgtMi4zMDMtLjk0Ny0zLjIxMS0uOTc1SDY0Ljg2Yy4wMTgtMS4wNDkuMDQyLTIuNzk2LjAyOC0zLjE0NS0uMDI0LS43OTctMS0uOC0xLjg0NS0xLjQ4Ni0uNzM3LS42LTEuMTA0LTIuMjU0LTEuMTA0LTIuMjU0bC0xLjgwNCAyLjQxMi0xLjI5My0uMDI4LTEuNTMtMi40MThzLS4zIDEuNTAyLTEuMzk4IDIuMTU2Yy0uNTczLjM1LTEuNzQ3Ljc2NS0xLjggMS40MTktLjAyLjIzIDAgMi4zMzQgMCAzLjQyLTIuODY1LjAyMi01LjA2Ny4wNC01LjMxMi4wMzYtLjc0IDAtMS41MS41MS0yLjE2Ni45OTItLjY1Ny40ODItLjk0IDEuNDc1LTEuMDI4IDEuNzktLjA4Ny4zMTQtLjAzMS41MzguMzExLjU0MWwyNy40MzMuMDc3YS40MTIuNDEyIDAgMCAwIC4yMjctLjJjLjA3NC0uMTQzLjI3Ni0xLjMxLTEuMzE0LTIuMzM3eiIvPjxwYXRoIGZpbGw9IiNCMkIyQjIiIGQ9Ik01OS41MzQgMjEuMTQyYTIuNDQ2IDIuNDQ2IDAgMSAwIDAgNC44OTMgMi40NDYgMi40NDYgMCAwIDAgMC00Ljg5M3ptLjIyNCAzLjY3YTEuMjI3IDEuMjI3IDAgMSAxLS40NzYtMi40MDcgMS4yMjcgMS4yMjcgMCAwIDEgLjQ3NiAyLjQwN3oiLz48cGF0aCBmaWxsPSIjQjJCMkIyIiBkPSJNNjAuMDE3IDI1LjdhMi4xNjcgMi4xNjcgMCAxIDEtLjk4LTQuMjIyIDIuMTY3IDIuMTY3IDAgMCAxIC45OCA0LjIyMXptLS4wODQtMy41MzRhMS40ODUgMS40ODUgMCAwIDAtMS44MzEgMS44MjVjLjEzNC40OTguNTIyLjg5IDEuMDIgMS4wMjdhMS40ODUgMS40ODUgMCAwIDAgMS44MzUtMS44MjQgMS40NTQgMS40NTQgMCAwIDAtMS4wMjQtMS4wMjh6Ii8+PHBhdGggZmlsbD0iIzAwQzU5OSIgZD0iTTEwNS44MSA1OS43MWMtMTMuNjI5IDAtMjQuNTY3LTcuNzgzLTI0LjY3NS03Ljg2bC0uNTk0LS40MzQtLjU5NC40MzRjLS4xMDkuMDc3LTExLjAzNyA3Ljg2LTI0LjY3NiA3Ljg2aC0xLjAxdjExLjA3N2MwIDI3LjgwNyAyNC4xNTEgMzcuMjUzIDI2LjI4IDM3LjI1MyAyLjEyOCAwIDI2LjI4LTkuNDM2IDI2LjI4LTM3LjI1M1Y1OS43MWgtMS4wMXoiLz48cGF0aCBmaWxsPSIjRkZGIiBkPSJNODguNDE0IDg0LjE4MmMtLjg5MS0uMzctMS44MTctLjc1NS0yLjU0LTEuNjUtLjc5LS45NjQtMS4wOTgtMi4wMTYtMS4zOTgtMy4wNC0uNTE0LTEuNzQ3LTEuMDA3LTMuMzgtMy43ODktMy4zOGgtLjI1MWMtMi43OTYgMC0zLjI3MSAxLjY0My0zLjc4OCAzLjM4LS4zMTEgMS4wMjQtLjYyMiAyLjA3Ni0xLjM5OCAzLjA0LS43MjQuODk1LTEuNjUgMS4yOC0yLjUzNyAxLjY1LTEuNDYxLjU5OC0yLjk4NSAxLjIyNy0yLjk4NSA0LjA1NCAwIDEuOTU3LjU3MyA0LjAzNiA0LjgxMiA0LjEzN2E0LjQyIDQuNDIgMCAwIDAgMy4xNDUtLjk2NGMuNjIzLS40MzMgMS4yMTctLjg1IDIuOTA1LS44NSAxLjY4NyAwIDIuMjY4LjQxNyAyLjg5My44NWE0LjMzNyA0LjMzNyAwIDAgMCAyLjkzMi45NjhoLjIwNmM0LjI0LS4xMDEgNC44MDktMi4xOCA0LjgwOS00LjEzOC0uMDQ2LTIuODMtMS41NTktMy40Ni0zLjAxNi00LjA1N3pNNzcuNSA3NS4xMzRjMS42NS0uNDU3IDIuNTMtMi42MDcgMS45Ni00LjgwOC0uNTY5LTIuMjAyLTIuMzc2LTMuNjE0LTQuMDE1LTMuMTQ1LTEuNjM5LjQ2OC0yLjUzIDIuNjA3LTEuOTY0IDQuODA4LjU2NyAyLjIwMiAyLjM3IDMuNjA3IDQuMDIgMy4xNDV6bTYuMDc3IDBjMS42NS40NjkgMy40NTMtLjk1IDQuMDIzLTMuMTQ1LjU3LTIuMTk0LS4zMTEtNC4zNS0xLjk3MS00LjgwOC0xLjY2LS40NTgtMy40MzkuOTUtNC4wMDkgMy4xNDUtLjU3IDIuMTk0LjMwNCA0LjM0NCAxLjk1NyA0LjgwOHptLTExLjQ5MyA1LjQxN2MxLjY0Ni0uNDU4IDIuNTMtMi42MDcgMS45NTMtNC44MTItLjU3Ny0yLjIwNS0yLjM2Ni0zLjYwNi00LjAxNS0zLjE0NS0xLjY1LjQ2MS0yLjUzIDIuNjE0LTEuOTY0IDQuODA4LjU2NiAyLjE5NSAyLjM3NiAzLjYwNyA0LjAyNiAzLjE1ek05MS4wNiA3Mi41OWMtMS42NDctLjQ1Ny0zLjQ1My45NDctNC4wMjMgMy4xNDUtLjU3IDIuMTk5LjMxNSA0LjM1NSAxLjk2NCA0LjgxMyAxLjY1LjQ1NyAzLjQ0Ni0uOTQ0IDQuMDE5LTMuMTQ2LjU3My0yLjIwMS0uMzA4LTQuMzY0LTEuOTYtNC44MTJ6Ii8+PC9nPjwvc3ZnPg==" alt="">
-                    <p>Safety</p>
-                    <p>Our dedicated customer support team sticks by you, and services booked on the Wag! platform may be protected with up to $1M property damage protection. See the
-                        <span>customer claims policy</span> for details.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="love-dogs">
-        <div class="love-dogs-container">
-            <div class="love-dogs-column">
-                <h2>Love dogs? Get paid for it!</h2>
-                <p style="margin: 20px auto;">Caring for dogs is what you do best. Connecting dog walkers, sitters, and trainers with a nationwide community of pet parents who have dog walking, overnight sitting & boarding, or training needs is what we do best. Build your business and become your own boss with Wag!.</p>
-                <p><a href="" style="text-decoration: none; color: rgb(0, 191, 143);">Meet some Pet Caregivers who walk for Wag!</a></p>
-            </div>
-            <div class="column">
-                <img src="https://wagwalking.com/_next/static/images/become-a-walker-partner-program-f261b8b128cfd6d86b2a8e8c634cd05f.png" alt="">
+    <section class="why-wag py-5">
+        <div class="container">
+            <h2 class="text-center mt-5 pb-5">Why Wag!?</h2>
+            <div class="why-wrapper d-flex justify-content-center gap-5">
+                <div class="images d-flex flex-column gap-5">
+                    <img class="img-fluid why-pics" src="https://wagwalking.com/_next/static/images/reason-1-desktop-53b878ea0fb78f06fe292ed0e723e996.png" alt="">
+                    <img class="img-fluid why-pics" src="https://wagwalking.com/_next/static/images/reason-2-desktop-0eade3a01ad565d1721c75fc4f9b2776.png" alt="">
+                    <img class="img-fluid why-pics" src="https://wagwalking.com/_next/static/images/reason-3-desktop-a0f4bbdfbdd0df72433271c12322ff63.png" alt="">
+                    <img class="img-fluid why-pics" src="https://wagwalking.com/_next/static/images/reason-4-desktop-167ab3591b7f07acf8b3052a4df7ada3.png" alt="">
+                </div>
+                <div class="divider d-flex flex-column mt-5">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="34.014" height="180" viewBox="0 0 34.014 167">
+                        <g id="FINAL" transform="translate(120 73)">
+                            <g id="_1_www_walks" data-name="1_www_walks" transform="translate(-120 -73)">
+                                <g id="Group-6" transform="translate(0 0)">
+                                    <g id="reasons-to-wag" transform="translate(0 0)">
+                                        <path id="Line-4" d="M.153,0V116" transform="translate(17.271 50)" fill="none" stroke="#00bf8f" stroke-linecap="round" stroke-width="2"/>
+                                        <g id="paw">
+                                            <path id="Path" d="M27.581,22.913A7.867,7.867,0,0,1,24.167,20.7a10.783,10.783,0,0,1-1.879-4.083c-.69-2.347-1.353-4.539-5.092-4.539h-.338c-3.758,0-4.4,2.206-5.092,4.539A11.31,11.31,0,0,1,9.887,20.7a7.88,7.88,0,0,1-3.41,2.215c-1.963.8-4.011,1.647-4.011,5.444,0,2.628.77,5.421,6.468,5.557a5.945,5.945,0,0,0,4.227-1.3,5.651,5.651,0,0,1,3.9-1.141,5.616,5.616,0,0,1,3.889,1.141,5.832,5.832,0,0,0,3.941,1.3h.277c5.7-.136,6.463-2.929,6.463-5.557C31.574,24.56,29.54,23.715,27.581,22.913Z" transform="translate(0.008 0.065)" fill="#00bf8f"/>
+                                            <path id="Path-2" data-name="Path" d="M12.887,10.8c2.215-.615,3.4-3.5,2.633-6.458S12.329-.508,10.128.12s-3.4,3.5-2.638,6.458S10.672,11.422,12.887,10.8Z" transform="translate(0.032 0)" fill="#00bf8f"/>
+                                            <path id="Path-3" data-name="Path" d="M21.012,10.8c2.215.629,4.637-1.277,5.4-4.224S26,.735,23.767.12,19.149,1.4,18.384,4.345,18.792,10.179,21.012,10.8Z" transform="translate(0.079 0)" fill="#00bf8f"/>
+                                            <path id="Path-4" data-name="Path" d="M5.637,18.053c2.211-.615,3.4-3.5,2.624-6.463S5.083,6.746,2.868,7.366-.53,10.877.23,13.824,3.422,18.668,5.637,18.053Z" transform="translate(0 0.032)" fill="#00bf8f"/>
+                                            <path id="Path-5" data-name="Path" d="M31.036,7.361c-2.211-.615-4.637,1.272-5.4,4.224s.422,5.848,2.638,6.463,4.628-1.267,5.4-4.224S33.256,7.962,31.036,7.361Z" transform="translate(0.11 0.032)" fill="#00bf8f"/>
+                                        </g>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="34.014" height="180" viewBox="0 0 34.014 167">
+                        <g id="FINAL" transform="translate(120 73)">
+                            <g id="_1_www_walks" data-name="1_www_walks" transform="translate(-120 -73)">
+                                <g id="Group-6" transform="translate(0 0)">
+                                    <g id="reasons-to-wag" transform="translate(0 0)">
+                                        <path id="Line-4" d="M.153,0V116" transform="translate(17.271 50)" fill="none" stroke="#00bf8f" stroke-linecap="round" stroke-width="2"/>
+                                        <g id="paw">
+                                            <path id="Path" d="M27.581,22.913A7.867,7.867,0,0,1,24.167,20.7a10.783,10.783,0,0,1-1.879-4.083c-.69-2.347-1.353-4.539-5.092-4.539h-.338c-3.758,0-4.4,2.206-5.092,4.539A11.31,11.31,0,0,1,9.887,20.7a7.88,7.88,0,0,1-3.41,2.215c-1.963.8-4.011,1.647-4.011,5.444,0,2.628.77,5.421,6.468,5.557a5.945,5.945,0,0,0,4.227-1.3,5.651,5.651,0,0,1,3.9-1.141,5.616,5.616,0,0,1,3.889,1.141,5.832,5.832,0,0,0,3.941,1.3h.277c5.7-.136,6.463-2.929,6.463-5.557C31.574,24.56,29.54,23.715,27.581,22.913Z" transform="translate(0.008 0.065)" fill="#00bf8f"/>
+                                            <path id="Path-2" data-name="Path" d="M12.887,10.8c2.215-.615,3.4-3.5,2.633-6.458S12.329-.508,10.128.12s-3.4,3.5-2.638,6.458S10.672,11.422,12.887,10.8Z" transform="translate(0.032 0)" fill="#00bf8f"/>
+                                            <path id="Path-3" data-name="Path" d="M21.012,10.8c2.215.629,4.637-1.277,5.4-4.224S26,.735,23.767.12,19.149,1.4,18.384,4.345,18.792,10.179,21.012,10.8Z" transform="translate(0.079 0)" fill="#00bf8f"/>
+                                            <path id="Path-4" data-name="Path" d="M5.637,18.053c2.211-.615,3.4-3.5,2.624-6.463S5.083,6.746,2.868,7.366-.53,10.877.23,13.824,3.422,18.668,5.637,18.053Z" transform="translate(0 0.032)" fill="#00bf8f"/>
+                                            <path id="Path-5" data-name="Path" d="M31.036,7.361c-2.211-.615-4.637,1.272-5.4,4.224s.422,5.848,2.638,6.463,4.628-1.267,5.4-4.224S33.256,7.962,31.036,7.361Z" transform="translate(0.11 0.032)" fill="#00bf8f"/>
+                                        </g>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="34.014" height="180" viewBox="0 0 34.014 167">
+                        <g id="FINAL" transform="translate(120 73)">
+                            <g id="_1_www_walks" data-name="1_www_walks" transform="translate(-120 -73)">
+                                <g id="Group-6" transform="translate(0 0)">
+                                    <g id="reasons-to-wag" transform="translate(0 0)">
+                                        <path id="Line-4" d="M.153,0V116" transform="translate(17.271 50)" fill="none" stroke="#00bf8f" stroke-linecap="round" stroke-width="2"/>
+                                        <g id="paw">
+                                            <path id="Path" d="M27.581,22.913A7.867,7.867,0,0,1,24.167,20.7a10.783,10.783,0,0,1-1.879-4.083c-.69-2.347-1.353-4.539-5.092-4.539h-.338c-3.758,0-4.4,2.206-5.092,4.539A11.31,11.31,0,0,1,9.887,20.7a7.88,7.88,0,0,1-3.41,2.215c-1.963.8-4.011,1.647-4.011,5.444,0,2.628.77,5.421,6.468,5.557a5.945,5.945,0,0,0,4.227-1.3,5.651,5.651,0,0,1,3.9-1.141,5.616,5.616,0,0,1,3.889,1.141,5.832,5.832,0,0,0,3.941,1.3h.277c5.7-.136,6.463-2.929,6.463-5.557C31.574,24.56,29.54,23.715,27.581,22.913Z" transform="translate(0.008 0.065)" fill="#00bf8f"/>
+                                            <path id="Path-2" data-name="Path" d="M12.887,10.8c2.215-.615,3.4-3.5,2.633-6.458S12.329-.508,10.128.12s-3.4,3.5-2.638,6.458S10.672,11.422,12.887,10.8Z" transform="translate(0.032 0)" fill="#00bf8f"/>
+                                            <path id="Path-3" data-name="Path" d="M21.012,10.8c2.215.629,4.637-1.277,5.4-4.224S26,.735,23.767.12,19.149,1.4,18.384,4.345,18.792,10.179,21.012,10.8Z" transform="translate(0.079 0)" fill="#00bf8f"/>
+                                            <path id="Path-4" data-name="Path" d="M5.637,18.053c2.211-.615,3.4-3.5,2.624-6.463S5.083,6.746,2.868,7.366-.53,10.877.23,13.824,3.422,18.668,5.637,18.053Z" transform="translate(0 0.032)" fill="#00bf8f"/>
+                                            <path id="Path-5" data-name="Path" d="M31.036,7.361c-2.211-.615-4.637,1.272-5.4,4.224s.422,5.848,2.638,6.463,4.628-1.267,5.4-4.224S33.256,7.962,31.036,7.361Z" transform="translate(0.11 0.032)" fill="#00bf8f"/>
+                                        </g>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </svg>
+                    <svg id="paw" xmlns="http://www.w3.org/2000/svg" width="33.875" height="33.86" viewBox="0 0 33.875 33.86">
+                        <path id="Path" d="M27.476,22.876a7.833,7.833,0,0,1-3.4-2.208A10.751,10.751,0,0,1,22.2,16.6c-.688-2.339-1.347-4.523-5.07-4.523H16.8c-3.742,0-4.378,2.2-5.07,4.523a11.275,11.275,0,0,1-1.871,4.069,7.846,7.846,0,0,1-3.4,2.208c-1.955.8-3.995,1.642-3.995,5.426,0,2.619.767,5.4,6.441,5.538a5.917,5.917,0,0,0,4.21-1.291A5.624,5.624,0,0,1,17,31.412a5.59,5.59,0,0,1,3.873,1.137,5.8,5.8,0,0,0,3.924,1.3h.276c5.674-.136,6.436-2.919,6.436-5.538C31.451,24.517,29.426,23.676,27.476,22.876Z" fill="#00bf8f"/>
+                        <path id="Path-2" data-name="Path" d="M12.868,10.766c2.208-.613,3.386-3.489,2.624-6.436S12.311-.507,10.118.12,6.731,3.609,7.489,6.556,10.66,11.383,12.868,10.766Z" fill="#00bf8f"/>
+                        <path id="Path-3" data-name="Path" d="M21,10.766c2.208.627,4.621-1.272,5.384-4.21S25.97.733,23.748.12s-4.6,1.272-5.365,4.21S18.79,10.144,21,10.766Z" fill="#00bf8f"/>
+                        <path id="Path-4" data-name="Path" d="M5.618,18.016C7.821,17.4,9,14.527,8.233,11.575S5.066,6.748,2.858,7.365-.528,10.864.23,13.8,3.41,18.629,5.618,18.016Z" fill="#00bf8f"/>
+                        <path id="Path-5" data-name="Path" d="M31.016,7.361c-2.2-.613-4.621,1.268-5.384,4.21s.421,5.828,2.629,6.441,4.612-1.263,5.379-4.21S33.229,7.959,31.016,7.361Z" fill="#00bf8f"/>
+                      </svg>
+                </div>
+                <div class="why-text">
+                    <div class="why-text-block">
+                        <h3>Here when you need us</h3>
+                        <p>Whether you're looking for daily walks, planning a trip, stuck at work, or just want your best friend to have some company — we offer any day, anytime care.</p>
+                    </div>
+                    <div class="why-text-block">
+                        <h3>Safety is serious business</h3>
+                        <p>Your dog's safety is our top priority. Every Pet Caregiver passes an enhanced background check, our services are insured, and support is standing by 7 days a week.</p>
+                    </div>
+                    <div class="why-text-block">
+                        <h3>All about convenience</h3>
+                        <p>We've thought of everything, so you don't have to. From GPS-tracked walks and customized lockboxes, to easy booking on the Wag! app, we make your life easier at every step.</p>
+                    </div>
+                    <div class="why-text-block">
+                        <h3>We've been around the block</h3>
+                        <p>Wag! has a trusted record of experience with over 12.1M pet care services across 5,300 cities and counting. More than 400,000 Pet Caregivers nationwide are dog people, and it shows.</p>
+                    </div>
+                    <button class="why-wag-btn mt-4">Get started</button>
+                </div>
             </div>
         </div>
     </section>
 
     <section class="testimonials">
-        <h2>Hear from Pet Caregivers like you</h2>
-        <div class="testimonials-container">
-            <div class="wrapper">
-                <div class="card">
-                    <div class="card-thumb">
-                        <img src="https://images.wagwalkingweb.com/media/daily_wag/blog_articles/hero/1660319615.6800945/what-to-look-for-in-a-dog-walker.png" class="client-img" alt="">
-                        <span class="client-name">Katie M.</span>
+
+    </section>
+
+    <section class="trust-safety">
+
+    </section>
+
+    <section class="partnership">
+
+    </section>
+
+    <section class="pet-resource">
+
+    </section>
+
+    <section class="help-wanted my-5">
+        <div class="container d-flex justify-content-between">
+            <div class="empty-right"></div>
+            <div class="help-wanted-text">
+                <h2>Animal lovers wanted!</h2>
+                <p>
+                    Are you a dog lover with pet care experience?<br />
+                    Want to earn money working with dogs?<br />
+                    Learn more about becoming a dog walker, sitter, or trainer in your city.
+                </p>
+                <button class="help-wanted-btn">Become a walker</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="top-wag-cities py-5">
+        <div class="container">
+            <h2 class="text-center">Top Wag! cities</h2>
+            <div class="row pt-4">
+                <div class="col-lg-2 d-flex flex-column gap-3">
+                    <div class="city-state">
+                        <p class="city">Atlanta, GA</p>
+                        <span class="total-caregivers">5053 Pet Caregivers</span>
                     </div>
-                    <div class="card-body">
-                        <p class="review">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea, nam. Fugiat, ut provident. Nulla quibusdam labore ea est consequatur sequi fuga iusto laudantium, earum doloremque?</p>
+                    <div class="city-state">
+                        <p class="city">Austin, TX</p>
+                        <span class="total-caregivers">5511 Pet Caregivers</span>
+                    </div>
+                    <div class="city-state">
+                        <p class="city">Baltimore, MD</p>
+                        <span class="total-caregivers">2232 Pet Caregivers</span>
+                    </div>
+                    <div class="city-state">
+                        <p class="city">Boston, MA</p>
+                        <span class="total-caregivers">8099 Pet Caregivers</span>
+                    </div>
+                </div>
+                <div class="col-lg-2 d-flex flex-column gap-3">
+                    <div class="city-state">
+                        <p class="city">Charlotte, NC</p>
+                        <span class="total-caregivers">2496 Pet Caregivers</span>
+                    </div>
+                    <div class="city-state">
+                        <p class="city">Chicago, IL</p>
+                        <span class="total-caregivers">13255 Pet Caregivers</span>
+                    </div>
+                    <div class="city-state">
+                        <p class="city">Columbus, OH</p>
+                        <span class="total-caregivers">2337 Pet Caregivers</span>
+                    </div>
+                    <div class="city-state">
+                        <p class="city">Dallas, TX</p>
+                        <span class="total-caregivers">4192 Pet Caregivers</span>
+                    </div>
+                </div>
+                <div class="col-lg-2 d-flex flex-column gap-3">
+                    <div class="city-state">
+                        <p class="city">Denver, CO</p>
+                        <span class="total-caregivers">8250 Pet Caregivers</span>
+                    </div>
+                    <div class="city-state">
+                        <p class="city">Houston, TX</p>
+                        <span class="total-caregivers">4557 Pet Caregivers</span>
+                    </div>
+                    <div class="city-state">
+                        <p class="city">Indianapolis, IN</p>
+                        <span class="total-caregivers">1680 Pet Caregivers</span>
+                    </div>
+                    <div class="city-state">
+                        <p class="city">Los Angeles, CA</p>
+                        <span class="total-caregivers">16202 Pet Caregivers</span>
+                    </div>
+                </div>
+                <div class="col-lg-2 d-flex flex-column gap-3">
+                    <div class="city-state">
+                        <p class="city">Miami, FL</p>
+                        <span class="total-caregivers">4221 Pet Caregivers</span>
+                    </div>
+                    <div class="city-state">
+                        <p class="city">Minneapolis, MN</p>
+                        <span class="total-caregivers">2635 Pet Caregivers</span>
+                    </div>
+                    <div class="city-state">
+                        <p class="city">Nashville, TN</p>
+                        <span class="total-caregivers">2680 Pet Caregivers</span>
+                    </div>
+                    <div class="city-state">
+                        <p class="city">New York, NY</p>
+                        <span class="total-caregivers">22620 Pet Caregivers</span>
+                    </div>
+                </div>
+                <div class="col-lg-2 d-flex flex-column gap-3">
+                    <div class="city-state">
+                        <p class="city">Philadelphia, PA</p>
+                        <span class="total-caregivers">5705 Pet Caregivers</span>
+                    </div>
+                    <div class="city-state">
+                        <p class="city">Portland, OR</p>
+                        <span class="total-caregivers">4114 Pet Caregivers</span>
+                    </div>
+                    <div class="city-state">
+                        <p class="city">Raleigh, NC</p>
+                        <span class="total-caregivers">2238 Pet Caregivers</span>
+                    </div>
+                    <div class="city-state">
+                        <p class="city">San Diego, CA</p>
+                        <span class="total-caregivers">6947 Pet Caregivers</span>
+                    </div>
+                </div>
+                <div class="col-lg-2 d-flex flex-column gap-3">
+                    <div class="city-state">
+                        <p class="city">San Francisco, CA</p>
+                        <span class="total-caregivers">11375 Pet Caregivers</span>
+                    </div>
+                    <div class="city-state">
+                        <p class="city">Seattle, WA</p>
+                        <span class="total-caregivers">6451 Pet Caregivers</span>
+                    </div>
+                    <div class="city-state">
+                        <p class="city">Tampa, FL</p>
+                        <span class="total-caregivers">2085 Pet Caregivers</span>
+                    </div>
+                    <div class="city-state">
+                        <p class="city">Washington, DC</p>
+                        <span class="total-caregivers">7680 Pet Caregivers</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="achievements">
-        <h2>We've been around the block</h2>
-        <div class="achievements-container">
-            <div class="achievements-box">
-                <div class="achievement">
-                    <h2>400K+</h2>
-                    <p>Pet Caregivers</p>
+    <section class="find-caregiver my-5">
+        <div class="container">
+            <h2 class="text-center">Find a trusted Pet Caregiver near you</h2>
+            <p class="text-center">Available in 5,300 cities across all 50 states</p>
+            <div class="row d-flex justify-content-center mt-5">
+                <div class="col-md-2 state-column">
+                    <div class="state-item">Alabama</div>
+                    <div class="state-item">Alaska</div>
+                    <div class="state-item">Arizona</div>
+                    <div class="state-item">Arkansas</div>
+                    <div class="state-item">California</div>
+                    <div class="state-item">Colorado</div>
+                    <div class="state-item">Connecticut</div>
+                    <div class="state-item">Delaware</div>
+                    <div class="state-item">Florida</div>
+                    <div class="state-item">Georgia</div>
                 </div>
-                <div class="achievement-content">
-                    <p>Our community of 400,000+ Pet Caregivers nationwide are dog people, and it shows.</p>
+                <div class="col-md-2 state-column">
+                    <div class="state-item">Hawaii</div>
+                    <div class="state-item">Idaho</div>
+                    <div class="state-item">Illinois</div>
+                    <div class="state-item">Indiana</div>
+                    <div class="state-item">Iowa</div>
+                    <div class="state-item">Kansas</div>
+                    <div class="state-item">Kentucky</div>
+                    <div class="state-item">Louisiana</div>
+                    <div class="state-item">Maine</div>
+                    <div class="state-item">Maryland</div>
                 </div>
-            </div>
-            <div class="achievements-box">
-                <div class="achievement">
-                    <h2>16M+</h2>
-                    <p>Meals Donated</p>
+                <div class="col-md-2 state-column">
+                    <div class="state-item">Massachusetts</div>
+                    <div class="state-item">Michigan</div>
+                    <div class="state-item">Minnesota</div>
+                    <div class="state-item">Mississippi</div>
+                    <div class="state-item">Missouri</div>
+                    <div class="state-item">Montana</div>
+                    <div class="state-item">Nebraska</div>
+                    <div class="state-item">Nevada</div>
+                    <div class="state-item">New Hampshire</div>
+                    <div class="state-item">New Jersey</div>
                 </div>
-                <div class="achievement-content">
-                    <p>We’ve donated over 16 million meals! A portion of our proceeds from the walks you book help to feed shelter dogs in your area.</p>
+                <div class="col-md-2 state-column">
+                    <div class="state-item">New Mexico</div>
+                    <div class="state-item">New York</div>
+                    <div class="state-item">North Carolina</div>
+                    <div class="state-item">North Dakota</div>
+                    <div class="state-item">Ohio</div>
+                    <div class="state-item">Oklahoma</div>
+                    <div class="state-item">Oregon</div>
+                    <div class="state-item">Pennsylvania</div>
+                    <div class="state-item">Rhode Island</div>
+                    <div class="state-item">South Carolina</div>
                 </div>
-            </div>
-            <div class="achievements-box">
-                <div class="achievement">
-                    <h2>5.3K+</h2>
-                    <p>Cities across the U.S.</p>
-                </div>
-                <div class="achievement-content">
-                    <p>Pet Caregivers with Wag! have a trusted record of experience with over 12 million pet care services, including Sitting, Walking, Boarding & Training, across 5,300+ cities in all 50 U.S. states.</p>
-                </div>
-            </div>
-            <div class="achievements-box">
-                <div class="achievement">
-                    <h2>99%</h2>
-                    <p>5-Star Reviews</p>
-                </div>
-                <div class="achievement-content">
-                    <p>Making Pet Parents happy is what we do best — 99% of Wag! services result in a 5-star review.</p>
+                <div class="col-md-2 state-column">
+                    <div class="state-item">South Dakota</div>
+                    <div class="state-item">Tennessee</div>
+                    <div class="state-item">Texas</div>
+                    <div class="state-item">Utah</div>
+                    <div class="state-item">Vermont</div>
+                    <div class="state-item">Virginia</div>
+                    <div class="state-item">Washington</div>
+                    <div class="state-item">West Virginia</div>
+                    <div class="state-item">Wisconsin</div>
+                    <div class="state-item">Wyoming</div>
                 </div>
             </div>
         </div>
-        <button>Sign up now</button>
-        <p style="padding-bottom: 30px;">Have some questions? Visit our FAQ page</p>
+    </section>
+
+    <div class="container py-5 mb-4">
+        <hr class="line-break">
+    </div>
+
+    <section class="find-products mb-5">
+        <div class="container">
+            <h2 class="text-center">Find the best pet food and pet products for your family</h2>
+            <div class="container-wrapper d-flex justify-content-between mt-5">
+                <div class="category">
+                    <h3 class="mb-4">Browse by category</h3>
+                    <ul class="list-unstyled">
+                        <li>Best Budget Friendly Dog Foods 2024</li>
+                        <li>Best Dog Food Delivery Service 2024</li>
+                        <li>Best Dog Food for Arthritis 2024</li>
+                        <li>Best Dog Food for Australian Shepherds 2024</li>
+                        <li>Best Dog Food for Beagles 2024</li>
+                        <li>Best Dog Food for Bernese Mountain Dogs 2024</li>
+                        <li>Best Dog Food for Border Collies 2024</li>
+                        <li>Best Dog Food for Boston Terriers 2024</li>
+                        <li>Best Dog Food for Boxers 2024</li>
+                        <li>Best Dog Food for Bulldogs 2024</li>
+                        <li>Best Dog Food for Cane Corsos 2024</li>
+                        <li>Best Dog Food for Canine Athletes 2024</li>
+                        <li>Best Dog Food for Cavalier King Charles Spaniels 2024</li>
+                        <li>Best Dog Food for Chihuahuas 2024</li>
+                        <li>Best Dog Food for Cocker Spaniels 2024</li>
+                        <li>Best Dog Food for Corgis 2024</li>
+                        <li>Best Dog Food for Dachshunds 2024</li>
+                        <li>Best Dog Food for Dalmatians 2024</li>
+                        <li>Best Dog Food for Diabetic Dogs 2024</li>
+                        <li>Best Dog Food for Diarrhea 2024</li>
+                        <li>Best Dog Food for Doberman Pinschers 2024</li>
+                        <li>Best Dog Food for Dogs with a Sensitive Stomach 2024</li>
+                        <li>Best Dog Food for English Bulldogs 2024</li>
+                        <li>Best Dog Food for French Bulldogs 2024</li>
+                        <li>Best Dog Food for German Shepherds 2024</li>
+                        <li>Best Dog Food for Golden Retrievers 2024</li>
+                        <li>Best Dog Food for Goldendoodles 2024</li>
+                        <li>Best Dog Food for Great Danes 2024</li>
+                        <li>Best Dog Food for Greyhounds 2024</li>
+                        <li>Best Dog Food for Havanese 2024</li>
+                        <li>Best Dog Food for Kidney Disease 2024</li>
+                        <li>Best Dog Food for Labrador Retrievers 2024</li>
+                        <li>Best Dog Food for Large Dogs 2024</li>
+                        <li>Best Dog Food for Maltese 2024</li>
+                        <li>Best Dog Food for Mastiffs 2024</li>
+                        <li>Best Dog Food for Miniature Schnauzers 2024</li>
+                        <li>Best Dog Food for Pancreatitis 2024</li>
+                        <li>Best Dog Food for Picky Eaters 2024</li>
+                        <li>Best Dog Food for Pit Bulls 2024</li>
+                        <li>Best Dog Food for Pomeranians 2024</li>
+                        <li>Best Dog Food for Poodles 2024</li>
+                        <li>Best Dog Food for Pregnant Dogs 2024</li>
+                        <li>Best Dog Food for Pugs 2024</li>
+                        <li>Best Dog Food for Puppies 2024</li>
+                        <li>Best Dog Food for Rottweilers 2024</li>
+                        <li>Best Dog Food for Shih Tzus 2024</li>
+                        <li>Best Dog Food for Siberian Huskies 2024</li>
+                        <li>Best Dog Food for Small Dogs 2024</li>
+                        <li>Best Dog Food for Weight Gain 2024</li>
+                        <li>Best Dog Food for Working Breeds 2024</li>
+                        <li>Best Dog Food for Yorkshire Terriers 2024</li>
+                        <li>Best Dog Food Without Chicken 2024</li>
+                        <li>Best Dog Foods for Overweight Dogs 2024</li>
+                        <li>Best Dog Foods for Senior Dogs 2024</li>
+                        <li>Best Dry Cat Food 2024</li>
+                        <li>Best Dry Foods for Dogs 2024</li>
+                        <li>Best Dry Puppy Food 2024</li>
+                        <li>Best Freeze-Dried Dog Food 2024</li>
+                        <li>Best Fresh Dog Food Brands 2024</li>
+                        <li>Best Frozen Dog Food 2024</li>
+                        <li>Best Grain Free Dog Food 2024</li>
+                        <li>Best High Protein Dog Food 2024</li>
+                        <li>Best High Protein Puppy Food 2024</li>
+                        <li>Best Hypoallergenic Dog Foods 2024</li>
+                        <li>Best Joint Supplements for Dogs 2024</li>
+                        <li>Best Low Fat Dog Food 2024</li>
+                        <li>Best Low Protein Dog Food 2024</li>
+                        <li>Best Meal Toppers for Dogs 2024</li>
+                        <li>Best Organic Dog Food 2024</li>
+                        <li>Best Plant-Based Dog Food 2024</li>
+                        <li>Best Puppy Food for Large Dogs 2024</li>
+                        <li>Best Puppy Food for Small Dogs 2024</li>
+                        <li>Best Raw Dog Food 2024</li>
+                        <li>Best Wet Foods for Dogs 2024</li>
+                        <li>Best Wet Puppy Food 2024</li>
+                    </ul>
+                </div>
+                <div class="brand">
+                    <h3 class="mb-4">Browse by brand</h3>
+                    <ul class="list-unstyled">
+                        <li>4Health Dog Food Review 2024</li>
+                        <li>A Pup Above Dog Food Review 2024</li>
+                        <li>Acana Dog Food Review 2024</li>
+                        <li>American Journey Dog Food Review 2024</li>
+                        <li>Annamaet Dog Food Review 2024</li>
+                        <li>Avoderm Dog Food Review 2024</li>
+                        <li>Best Dog Food Without Chicken Review 2024</li>
+                        <li>Billy Jac Dog Food Review 2024</li>
+                        <li>Blue Buffalo Dog Food Review 2024</li>
+                        <li>ButcherBox Dog Food Review 2024</li>
+                        <li>Canidae Dog Food Review 2024</li>
+                        <li>Castor & Pollux Dog Food Review 2024</li>
+                        <li>Cesar Dog Food Review 2024</li>
+                        <li>Diamond Dog Food Review 2024</li>
+                        <li>Dr. Gary's Best Breed Dog Food Review 2024</li>
+                        <li>Dr. Harvey's Dog Food Review 2024</li>
+                        <li>Dr. Marty Nature's Blend Dog Food Review 2024</li>
+                        <li>Eagle Pack Dog Food Review 2024</li>
+                        <li>Eukanuba Dog Food Review 2024</li>
+                        <li>Farmina Dog Food Review 2024</li>
+                        <li>FirstMate Dog Food Review 2024</li>
+                        <li>Fresh is Best Dog Food Review 2024</li>
+                        <li>Freshpet Select Dog Food Review 2024</li>
+                        <li>Front of the Pack Dog Food Review 2024</li>
+                        <li>Gentle Giants Dog Food Review 2024</li>
+                        <li>Grandma Lucy's Dog Food Review 2024</li>
+                        <li>Gravy Train Dog Food Review 2024</li>
+                        <li>Halo Dog Food Review 2024</li>
+                        <li>Hill's Science Diet Dog Food Review 2024</li>
+                        <li>Holistic Select Dog Food Review 2024</li>
+                        <li>Iams Dog Food Review 2024</li>
+                        <li>Instinct Dog Food Review 2024</li>
+                        <li>Jinx Dog Food Review 2024</li>
+                        <li>JustFoodForDogs Dog Food Review 2024</li>
+                        <li>Kibbles 'n Bits Dog Food Review 2024</li>
+                        <li>Kirkland Dog Food Review 2024</li>
+                        <li>Merrick Cat Food Review 2024</li>
+                        <li>Merrick Dog Food Review 2024</li>
+                        <li>Natural Balance Dog Food Review 2024</li>
+                        <li>Nature's Recipe Dog Food Review 2024</li>
+                        <li>Nom Nom Dog Food Review 2024</li>
+                        <li>Nulo Dog Food Review 2024</li>
+                        <li>Nutrisource Dog Food Review 2024</li>
+                        <li>Nutro Dog Food Review 2024</li>
+                        <li>Ollie Dog Food Review 2024</li>
+                        <li>Open Farm Dog Food Review 2024</li>
+                        <li>Orijen Dog Food Review 2024</li>
+                        <li>Pedigree Dog Food Review 2024</li>
+                        <li>Primal Dog Food Review 2024</li>
+                        <li>Purina One Dog Food Review 2024</li>
+                        <li>Raised Right Dog Food Review 2024</li>
+                        <li>Redbarn Dog Food Review 2024</li>
+                        <li>Solid Gold Dog Food Review 2024</li>
+                        <li>Spot Farms Dog Food Review 2024</li>
+                        <li>Spot Tango Dog Food Review 2024</li>
+                        <li>Stella and Chewy Dog Food Review 2024</li>
+                        <li>Sundays Food for Dogs Review 2024</li>
+                        <li>Taste of the Wild Dog Food Review 2024</li>
+                        <li>The Farmer's Dog Fresh Food Review 2024</li>
+                        <li>The Honest Kitchen Dog Food Review 2024</li>
+                        <li>Victor Dog Food Review 2024</li>
+                        <li>We Feed Raw Dog Food Review 2024</li>
+                        <li>Wellness Dog Food Review 2024</li>
+                        <li>Weruva Dog Food Review 2024</li>
+                        <li>Whole Earth Farms Dog Food Review 2024</li>
+                        <li>Wholehearted Dog Food Review 2024</li>
+                        <li>Wild Earth Dog Food Review 2024</li>
+                        <li>Zignature Dog Food Review 2024</li>
+                        <li>Acana Cat Food Review 2024</li>
+                        <li>Blue Buffalo Cat Food Review 2024</li>
+                        <li>Canidae Cat Food Review 2024</li>
+                        <li>Halo Cat Food Review 2024</li>
+                        <li>Nulo Cat Food Review 2024</li>
+                        <li>Open Farm Cat Food Review 2024</li>
+                        <li>Orijen Cat Food Review 2024</li>
+                        <li>Purina Pro Plan LiveClear Cat Allergen Reducing Cat Food Review 2024</li>
+                        <li>Raised Right Cat Food Review 2024</li>
+                        <li>Solid Gold Cat Food Review 2024</li>
+                        <li>Stella and Chewy's Cat Food Review 2024</li>
+                        <li>Taste of the Wild Cat Food Review 2024</li>
+                        <li>The Honest Kitchen Cat Food Review 2024</li>
+                        <li>Wellness Cat Food Review 2024</li>
+                        <li>Weruva Cat Food Review 2024</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </section>
 
     <footer>
-        <div class="footer-container">
-            <div class="first-footer-column">
-                <img class="footer-logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Wag_logo.svg/2560px-Wag_logo.svg.png" alt="">
-                <ul>
-                    <li style="font-size: 20px; padding-top: 10px;"><a href="#"><span><i class="far fa-question-circle"></i> Help Center</span></a></li>
-                    <a href="#"><img class="app-img" src="https://i.pinimg.com/originals/e5/63/d9/e563d97183e6468f0f32f4a01c424e68.png" alt=""></a>
-                    <li>Download the Wag! app</li>
-                </ul>
+        <div class="container d-flex justify-content-between mx-auto">
+            <div class="d-flex flex-column justify-content-between">
+                <div class="logo-help d-flex flex-column">
+                    <img class="footer-logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Wag_logo.svg/2560px-Wag_logo.svg.png" alt="">
+                    <a href="#"><span><i class="far fa-question-circle"></i> Help Center</span></a>
+                </div>
+                <div class="download-app mt-5">
+                    <ul class="list-unstyled">
+                        <li>Download the Wag! app</li>
+                        <li><a href="#"><img class="app-img" src="https://i.pinimg.com/originals/e5/63/d9/e563d97183e6468f0f32f4a01c424e68.png" alt=""></a></li>
+                    </ul>
+                </div>
             </div>
             <div class="footer-column">
                 <h4>About Wag!</h4>
@@ -239,9 +688,6 @@
             <hr>
         </div>
         <div class="footer-bottom">
-            <div class="footer-bottom-left">
-                <p style="font-size: 14px;">© 2023 Wag Labs, Inc. All rights reserved.</p>
-            </div>
             <div class="footer-bottom-middle">
                 <ul class="footer-links">
                     <li><a href="#">Privacy policy</a></li>
@@ -249,19 +695,26 @@
                     <li><a href="#">Terms & conditions</a></li>
                     <li><a href="#">Accessibility</a></li>
                     <li><a href="#">Transparency</a></li>
+                    <li><a href="#">Ad Tracking</a></li>
                 </ul>
             </div>
             <div class="footer-bottom-right">
                 <ul class="footer-social">
                     <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
                     <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-                    <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-square-x-twitter"></i></a></li>
                     <li><a href="#"><i class="fa-brands fa-tiktok"></i></a></li>
                 </ul>
             </div>
         </div>
+        <div class="text-center">
+            <p style="font-size: 14px;">© 2024 Wag Labs, Inc. All rights reserved.</p>
+        </div>
     </footer>    
 
-    <script src="./index.js"></script>
+    <script src="./script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/5916c53508.js" crossorigin="anonymous"></script>
 </body>
 </html>
