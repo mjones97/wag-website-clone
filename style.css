@@ -57,10 +57,26 @@ p, li {
 .nav-link {
     font-size: 16px;
     color: #474747;
+    padding: 0;
 }
 
 .nav-link:hover {
     color: #727272;
+}
+
+.deals {
+    background-color: #fae7a8;
+    border: none;
+    border-radius: 30px;
+    padding: 2px 13px;
+}
+
+.right-nav-link li a {
+    color: #00bf8f !important;
+}
+
+.right-nav-link:hover {
+    color: #00bf8f;
 }
 
 .navbar-nav {
@@ -100,7 +116,7 @@ p, li {
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    width: 200px;
+    width: 226px;
     min-height: 158px;
 }
 
@@ -266,6 +282,51 @@ p, li {
 .card-img-overlay {
     background: rgba(0, 0, 0, 0.20);
     border-radius: 1rem;
+}
+
+.swiper-button-next-2, .swiper-button-prev-2 {
+    background-color: #00bf8f;
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+}
+
+.swiper-button-next-2 {
+    margin-top: 20px;
+    right: 85px;
+    background-image: url('data:image/svg+xml,%3Csvg%20width%3D%2222%22%20height%3D%2222%22%20viewBox%3D%220%200%2014%2022%22%20xmlns%3D%22http://www.w3.org/2000/svg%22%3E%3Cpath%20d%3D%22M2.792%2021.97a2.63%202.63%200%2001-1.861-4.492l6.035-6.036L.93%205.407a2.63%202.63%200%20113.722-3.721L12.55%209.58a2.63%202.63%200%20010%203.722l-7.896%207.896a2.623%202.623%200%2001-1.86.77%22%20fill%3D%22%23FFF%22%20fill-rule%3D%22evenodd%22/%3E%3C/svg%3E');
+    background-position: 8px;
+    background-size: 27px;
+}
+
+.swiper-button-prev-2 {
+    left: 85px;
+    background-image: url('data:image/svg+xml,%3Csvg%20width%3D%2222%22%20height%3D%2222%22%20viewBox%3D%220%200%2014%2022%22%20xmlns%3D%22http://www.w3.org/2000/svg%22%3E%3Cpath%20d%3D%22M2.792%2021.97a2.63%202.63%200%2001-1.861-4.492l6.035-6.036L.93%205.407a2.63%202.63%200%20113.722-3.721L12.55%209.58a2.63%202.63%200%20010%203.722l-7.896%207.896a2.623%202.623%200%2001-1.86.77%22%20fill%3D%22%23FFF%22%20fill-rule%3D%22evenodd%22/%3E%3C/svg%3E');
+    transform: rotate(180deg);
+    background-position: 8px;
+    background-size: 27px;
+
+}
+
+.swiper-button-next-2:after, .swiper-button-prev-2:after {
+    content: "";
+    width: 22px;
+    height: 22px;
+    display: inline-block;
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 .help-wanted {

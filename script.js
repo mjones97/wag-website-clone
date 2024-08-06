@@ -1,45 +1,46 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const swiper = new Swiper('.mySwiper', {
+const swiper = new Swiper('.mySwiper', {
         slidesPerView: '5',
         spaceBetween: 20,
-    });
+});
 
-    const slides = document.querySelectorAll('.swiper-slide');
-    
-    slides.forEach(slide => {
-        slide.addEventListener('click', function() {
-            const targetId = this.getAttribute('data-target');
-            
-            // Remove active class from all slides
-            slides.forEach(slide => {
-                slide.classList.remove('active');
-            });
+const slides = document.querySelectorAll('.swiper-slide');
 
-            // Hide all category contents
-            document.querySelectorAll('.category-content').forEach(content => {
-                content.style.display = 'none';
-            });
-
-            // Show the selected category content
-            document.querySelector(targetId).style.display = 'block';
-
-            // Add active class to the clicked slide
-            this.classList.add('active');
-            
-            // Optional: Scroll to top of content
-            document.querySelector(targetId).scrollIntoView({ behavior: 'smooth' });
+slides.forEach(slide => {
+    slide.addEventListener('click', function() {
+        const targetId = this.getAttribute('data-target');
+        
+        slides.forEach(slide => {
+            slide.classList.remove('active');
         });
+
+        document.querySelectorAll('.category-content').forEach(content => {
+            content.style.display = 'none';
+        });
+
+        document.querySelector(targetId).style.display = 'block';
+
+        this.classList.add('active');
+        
+        document.querySelector(targetId).scrollIntoView({ behavior: 'smooth' });
     });
+});
 
-    // Show the first category content by default
-    slides[0].click();
+slides[0].click();
 
-    const swiper1 = new Swiper('.swiper-container-1', {
-        slidesPerView: 3,
-        spaceBetween: 30,
-        navigation: {
-          nextEl: '.swiper-button-next-1',
-          prevEl: '.swiper-button-prev-1',
-        },
-      });
+const swiper1 = new Swiper('.swiper-container-1', {
+    slidesPerView: 3,
+    spaceBetween: 30,
+    navigation: {
+        nextEl: '.swiper-button-next-1',
+        prevEl: '.swiper-button-prev-1',
+    },
+});
+
+const swiper2 = new Swiper('.swiper-container-2', {
+    slidesPerView: 6,
+    spaceBetween: 30,
+    navigation: {
+        nextEl: '.swiper-button-next-2',
+        prevEl: '.swiper-button-prev-2'
+    },
 });
