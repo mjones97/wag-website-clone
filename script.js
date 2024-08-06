@@ -1,12 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     const swiper = new Swiper('.mySwiper', {
         slidesPerView: '5',
-        spaceBetween: 10,
-        freeMode: true,
-        scrollbar: {
-            el: '.swiper-scrollbar',
-            hide: true,
-        },
+        spaceBetween: 20,
     });
 
     const slides = document.querySelectorAll('.swiper-slide');
@@ -38,4 +33,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Show the first category content by default
     slides[0].click();
+
+    const swiper1 = new Swiper('.swiper-container-1', {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        navigation: {
+          nextEl: '.swiper-button-next-1',
+          prevEl: '.swiper-button-prev-1',
+        },
+      });
 });

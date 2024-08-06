@@ -27,6 +27,15 @@ h4 {
     margin-top: 15px;
 }
 
+h5 {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+h6 {
+    font-size: 18px;
+}
+
 p, li {
     font-size: 18px;
 }
@@ -72,7 +81,7 @@ p, li {
 
 .filter-block {
     position: absolute;
-    top: 369px;
+    top: 360px;
     left: 300px;
     width: 1130px;
     margin: 0 auto;
@@ -80,11 +89,7 @@ p, li {
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
     background-color: rgb(242, 242, 242);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.swiper {
-    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
 .swiper-slide {
@@ -95,6 +100,8 @@ p, li {
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    width: 200px;
+    min-height: 158px;
 }
 
 .swiper-slide img {
@@ -109,12 +116,12 @@ p, li {
 .swiper-slide.active::after {
     content: '';
     display: block;
-    width: 100%;
+    width: 100px;
     height: 4px;
-    background-color: #007bff;
+    background-color: #00bf8f;
     position: absolute;
     bottom: 0;
-    left: 0;
+    left: 55px;
     transform: scaleY(1);
     transition: transform 0.3s ease;
 }
@@ -169,6 +176,96 @@ p, li {
     padding: 8px 20px;
     border: none;
     border-radius: 8px;
+}
+
+.swiper-container-1 {
+    position: relative;
+}
+
+.swiper-slide-1 {
+    background-color: #fff;
+    max-width: 328px;
+    height: 215px;
+    border: none;
+    border-radius: 10px;
+    padding: 16px;
+    overflow-y: scroll;
+}
+
+.swiper-img-1 {
+    position: absolute;
+}
+
+.swiper-slide-1 p{
+    font-size: 16px;
+}
+
+.swiper-button-next-1, .swiper-button-prev-1 {
+    background-color: #00bf8f;
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    position: absolute;
+    top: 55%;
+    transform: translateY(-50%);
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+}
+
+.swiper-button-next-1 {
+    right: 16px;
+    background-image: url('data:image/svg+xml,%3Csvg%20width%3D%2222%22%20height%3D%2222%22%20viewBox%3D%220%200%2014%2022%22%20xmlns%3D%22http://www.w3.org/2000/svg%22%3E%3Cpath%20d%3D%22M2.792%2021.97a2.63%202.63%200%2001-1.861-4.492l6.035-6.036L.93%205.407a2.63%202.63%200%20113.722-3.721L12.55%209.58a2.63%202.63%200%20010%203.722l-7.896%207.896a2.623%202.623%200%2001-1.86.77%22%20fill%3D%22%23FFF%22%20fill-rule%3D%22evenodd%22/%3E%3C/svg%3E');
+    background-position: 8px;
+    background-size: 27px;
+}
+
+.swiper-button-prev-1 {
+    left: 16px;
+    background-image: url('data:image/svg+xml,%3Csvg%20width%3D%2222%22%20height%3D%2222%22%20viewBox%3D%220%200%2014%2022%22%20xmlns%3D%22http://www.w3.org/2000/svg%22%3E%3Cpath%20d%3D%22M2.792%2021.97a2.63%202.63%200%2001-1.861-4.492l6.035-6.036L.93%205.407a2.63%202.63%200%20113.722-3.721L12.55%209.58a2.63%202.63%200%20010%203.722l-7.896%207.896a2.623%202.623%200%2001-1.86.77%22%20fill%3D%22%23FFF%22%20fill-rule%3D%22evenodd%22/%3E%3C/svg%3E');
+    transform: rotate(180deg);
+    background-position: 8px;
+    background-size: 27px;
+
+}
+
+.swiper-button-next-1:after, .swiper-button-prev-1:after {
+    content: "";
+    width: 22px;
+    height: 22px;
+    display: inline-block;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.partner-text {
+    max-width: 600px;
+}
+
+.green-wave {
+    margin-top: -14px;
+    width: 100%;
+    height: 150px;
+}
+
+.card {
+    width: 324px;
+    height: 200px;
+    border: none;
+    border-radius: 1rem;
+    background-size: cover; 
+    background-position: center;
+}
+
+.card-img-overlay {
+    background: rgba(0, 0, 0, 0.20);
+    border-radius: 1rem;
 }
 
 .help-wanted {
@@ -228,6 +325,7 @@ footer {
 }
 
 footer a {
+    font-size: 13px;
     text-decoration: none;
     color: rgb(153, 153, 153);
 }
@@ -235,6 +333,11 @@ footer a {
 .footer-logo {
     width: 100px;
     padding-bottom: 10px;
+}
+
+.help-btn {
+    font-size: 18px;
+    color: #00bf8f;
 }
 
 .app-img {
@@ -248,10 +351,6 @@ footer a {
 
 .footer-column {
     padding: 10px;
-}
-
-.footer-column a {
-    text-decoration: none;
 }
 
 .footer-column h4 {
@@ -295,15 +394,13 @@ footer a {
     text-decoration: none;
 }
 
-.footer-social {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+.socials {
     display: flex;
+    justify-content: end;
     gap: 12px;
 }
 
-.footer-social li a i {
+.socials li a i {
     font-size: 30px;
     color: rgb(173, 173, 173);
 }
