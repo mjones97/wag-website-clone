@@ -33,10 +33,12 @@
                             Services
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                <li><a class="dropdown-item" href="#">Walking</a></li>
+                                <li><a class="dropdown-item" href="#">Drop-ins</a></li>
+                                <li><a class="dropdown-item" href="#">Sitting</a></li>
+                                <li><a class="dropdown-item" href="#">Boarding</a></li>
+                                <li><a class="dropdown-item" href="#">Training</a></li>
+                                <li><a class="dropdown-item" href="#">Wag! Premium</a></li>
                             </ul>
                         </li>
                         <li class="nav-item dropdown">
@@ -44,10 +46,10 @@
                             Health & Wellness
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                <li><a class="dropdown-item" href="#">Pet Insurance</a></li>
+                                <li><a class="dropdown-item" href="#">Wag! Wellness Plans</a></li>
+                                <li><a class="dropdown-item" href="#">Vet Chat</a></li>
+                                <li><a class="dropdown-item" href="#">Wag! Premium</a></li>
                             </ul>
                         </li>
                         <li class="nav-item">
@@ -82,8 +84,10 @@
 
     <section class="hero">
         <div class="hero-container text-white">
-            <h1>Local, trusted pet care</h1>
-            <h4>Book 5-star Pet Caregivers near you</h4>
+            <div class="hero-text">
+                <h1>Local, trusted pet care</h1>
+                <h4>Book 5-star Pet Caregivers near you</h4>
+            </div>
             <div class="categories">
                 <div class="filter-block position-relative">                    
                     <div class="swiper mySwiper">
@@ -113,13 +117,59 @@
                         </div>
                     </div>
                 </div>
-                <div id="walk-content" class="category-content">
-                    <div class="row">
+                <div id="walk-content" class="category-content active">
+                    <div class="row category-content-row">
                         <div class="col-lg-8 category-content-text">
-                            <p>Choose between a 20-minute, 30-minute, or 60-minute stroll for your dog. On-demand or pre-scheduled. Learn more about dog walking.</p>
+                            <p>Choose between a 20-minute, 30-minute, or 60-minute stroll for your dog. On-demand or pre-scheduled. <a href="#">Learn more about dog walking</a></p>
                         </div>
                         <div class="col-lg-4 category-content-btn-wrapper">
                             <button class="category-content-btn">Book a walk</button>
+                        </div>
+                    </div>
+                </div>
+                <div id="fashion-content" class="category-content">
+                    <div class="row category-content-row">
+                        <div class="col-lg-8 category-content-text">
+                            <p>A sleepover for your pet in the comfort of your home or a Pet Caregiver’s home, for as many nights as you need. Learn more about <a href="#">pet sitting</a> or <a href="#">boarding</a></p>
+                        </div>
+                        <div class="col-lg-4 category-content-btn-wrapper">
+                            <div class="category-buttons">
+                                <button class="category-content-btn mb-2">Book sitting</button>
+                                <button class="category-content-btn">Book baording</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="home-content" class="category-content">
+                    <div class="row category-content-row">
+                        <div class="col-lg-8 category-content-text">
+                            <p>A 20 minute home visit for pets who don’t need a walk, but love having friends over. <a href="#">Learn more about drop-in pet care</a></p>
+                        </div>
+                        <div class="col-lg-4 category-content-btn-wrapper">
+                            <button class="category-content-btn">Book Drop-in</button>
+                        </div>
+                    </div>
+                </div>
+                <div id="beauty-content" class="category-content">
+                    <div class="row category-content-row">
+                        <div class="col-lg-8 category-content-text">
+                            <p>Don’t choose between your pet and your wallet. Wag! Wellness helps you provide the best care for your pet at the best price. Compare pet insurance and wellness plans from top-rated providers, or connect with licensed vets for expert advice. <a href="#">Compare Pet Insurance Plans</a></p>
+                        </div>
+                        <div class="col-lg-4 category-content-btn-wrapper">
+                            <div class="category-buttons">
+                                <button class="category-content-btn mb-2">Insurance options</button>
+                                <button class="category-content-btn">Wag! Wellness</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="sports-content" class="category-content">
+                    <div class="row category-content-row">
+                        <div class="col-lg-8 category-content-text">
+                            <p>For dogs and cats of all ages and experience levels - work one-on-one with an experienced pet trainer from the comfort of your home. <a href="#">Learn more about dog training</a></p>
+                        </div>
+                        <div class="col-lg-4 category-content-btn-wrapper">
+                            <button class="category-content-btn">Book training</button>
                         </div>
                     </div>
                 </div>
@@ -324,8 +374,8 @@
         <div class="container text-center">
             <h2>Trust & Safety</h2>
 
-            <div class="row justify-content-center align-items-center gap-3 mt-5">
-                <div class="col-lg-3 d-flex flex-column">
+            <div class="row justify-content-between align-items-center mt-5">
+                <div class="col-lg-4 d-flex flex-column">
                     <div class="ts-img mb-4">
                         <svg width="160px" height="160px" viewBox="0 0 110 110" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                             <g id="FINAL" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -371,7 +421,8 @@
                         <p>Every Pet Caregiver on Wag! must pass an extensive background check so no matter who you choose, you're always getting the pick of the litter.</p>
                     </div>
                 </div>
-                <div class="col-lg-3 d-flex flex-column">
+
+                <div class="col-lg-4 d-flex flex-column">
                     <div class="ts-img mb-4">
                         <svg width="160px" height="160px" viewBox="0 0 110 110" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                             <g id="FINAL" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -419,7 +470,8 @@
                         <p>GPS tracking, lock boxes, and live chat with your Pet Caregiver are just some of the paw-some features to give you peace of mind during your pet's service.</p>
                     </div>
                 </div>
-                <div class="col-lg-3 d-flex flex-column">
+
+                <div class="col-lg-4 d-flex flex-column">
                     <div class="ts-img mb-4">
                         <img class="img-fluid" width="160" src="https://wagwalking.com/_next/static/images/support-1e6c2dbb298bc099bf3fa13d4bcfa6db.svg" alt="">
                     </div>
@@ -528,7 +580,7 @@
     </section>
 
     <section class="help-wanted my-5">
-        <div class="container d-flex justify-content-between">
+        <div class="d-flex justify-content-between">
             <div class="empty-right"></div>
             <div class="help-wanted-text">
                 <h2>Animal lovers wanted!</h2>

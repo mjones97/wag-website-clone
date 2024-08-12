@@ -64,6 +64,10 @@ p, li {
     color: #727272;
 }
 
+.dropdown-item {
+    font-size: 16px;
+}
+
 .deals {
     background-color: #fae7a8;
     border: none;
@@ -91,12 +95,14 @@ p, li {
 
 .hero-container {
     padding-top: 35px;
-    padding-left: 160px;
-    padding-right: 160px;
+}
+
+.hero-text {
+    margin-left: 160px;
 }
 
 .categories {
-    width: 100%;
+    width: 1200px;
     margin: 0 auto;
     padding: 20px;
 }
@@ -118,6 +124,7 @@ p, li {
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    position: relative;
     width: 100%;
     max-width: 226px;
     min-height: 153px;
@@ -125,8 +132,7 @@ p, li {
 }
 
 .swiper-slide img {
-    width: 50%;
-    max-width: 100px;
+    width: 100px;
 }
 
 .swiper-slide p {
@@ -148,10 +154,12 @@ p, li {
 }
 
 .category-content {
+    display: none;
     width: 100%;
     max-width: 1120px;
+    height: 200px;
     background-color: #fff;
-    margin: 0px auto 0 auto;
+    margin: 0 auto;
     padding: 35px 50px 85px 50px;
     border-radius: 0 0 8px 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
@@ -162,20 +170,30 @@ p, li {
     color: #000;
 }
 
+.category-content-text a {
+    font-weight: bold;
+    text-decoration: none;
+    color: #00bf8f;
+}
+
 .category-content-btn {
     width: 100%;
     background-color: #00bf8f;
     font-size: 20px;
     color: #fff;
-    padding: 10px 24px;
+    padding: 7px 24px;
     border: none;
     border-radius: 10px;
     display: block;
     text-align: center;
 }
 
+.category-content.active {
+    display: block;
+}
+
 .why-wag {
-    margin-top: 160px;
+    margin-top: 180px;
     margin-bottom: 100px;
 }
 
@@ -340,9 +358,9 @@ p, li {
 }
 
 .help-wanted-text {
+    padding-right: 200px;
     text-align: right;
     margin-top: 120px;
-
 }
 
 .help-wanted-text h2 {
@@ -357,9 +375,11 @@ p, li {
 
 .help-wanted-btn {
     background-color: #00bf8f;
+    font-size: 18px;
+    font-weight: bold;
     color: #fff;
     width: 300px;
-    padding: 14px 24px;
+    padding: 16px 24px;
     border: none;
     border-radius: 8px;
 }
